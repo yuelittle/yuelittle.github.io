@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>mouse</title>
+	<style type="text/css">
+		#img {
+			position: absolute;
+			left: 100px;
+			top: 220px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		window.onload = function () {
+			var img  = document.getElementById('img')
+			// document.onmousemove = function (e) {
+			// 	var ev = window.event || e;
+			// 	var t = ev.clientY;
+			// 	var l = ev.clientX;
+			// 	img.style.left = l+'px';
+			// 	img.style.top = t+'px';
+			// }
+			img.onclick = function (e) {
+				var ev = window.event || e;
+				var x = ev.offsetX;
+				var y = ev.offsetY;
+				alert(x);
+			}
+		}
+	</script>
+	<img src="22.jpg" alt="" id="img">
+</body>
+</html>

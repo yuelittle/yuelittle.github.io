@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<title>jquery</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		.demo {
+			width: 600px;
+			height: 600px;
+			border:1px solid red;
+			margin: 0 auto;
+			position: relative;
+		}
+		.demo ul {
+			width: 600px;
+			height: 40px;
+			margin: 0 auto
+		}
+		.demo ul li {
+			list-style: none;
+			float: left;
+			line-height: 40px;
+			width: 190px;
+			text-align: center;
+			font-size: 18px;
+			font-weight: 700;
+			border:1px solid #3c3c3c;
+			cursor: pointer;
+		}
+		.mod {
+			position: absolute;
+			top: 41px;
+			left: 0;
+			width: 600px;
+			height: 558px;
+			border:1px solid blue;
+		}
+	</style>
+	<script type="text/javascript">
+	$(function () {
+		$('ul li').mouseover(function () {
+			var n = $(this).index();
+			$('.mod').eq(n).show().siblings('.mod').hide();
+		}
+	})
+	</script>
+</head>
+<body>
+	<div class="demo">
+		<ul>
+			<li>新闻</li>
+			<li>热点</li>
+			<li>娱乐</li>
+		</ul>
+		<div class="mod" style="background:red">1</div>
+		<div class="mod" style="background:blue">2</div>
+		<div class="mod" style="background:yellow">3</div>
+	</div>
+</body>
+</html>

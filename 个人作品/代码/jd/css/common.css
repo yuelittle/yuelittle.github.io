@@ -1,0 +1,30 @@
+/*样式重置和公共类集合*/
+
+
+/*css reset*/
+body,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,img,span,em,i,input,p{
+	padding: 0;
+	margin: 0;
+}
+em,i{font-style: normal;}
+ul,li{
+	list-style: none;
+}
+img{
+	border:none;
+	outline: none;
+	vertical-align: top;
+}
+input{
+	outline: none;
+}
+a{text-decoration: none;}
+
+/*-----------common------------*/
+.fl{float: left;}
+.fr{float: right;}
+.clear{zoom:1;clear: both;}
+.clear:after,.clear:before{display: block;content: '';height: 0;visibility: hidden;line-height: 0;clear: both;}
+
+
+.txt-red{color: #C81623;}

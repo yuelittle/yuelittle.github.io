@@ -1,0 +1,896 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{margin:0;padding:0;}
+	li{list-style:none;}
+	
+	.clearfix:after {content:"";clear:both;display:block;}
+	.clearfix{zoom:1}
+
+	.top{height:36px;line-height:36px;width:100%;min-width:930px;border-bottom:1px solid #dfdfdf;font-size:12px;font-family:微软雅黑;margin-bottom:25px;}
+	
+	.t{width:930px;margin:0 auto;}
+	.t .topleft{float:left}
+	.t .topleft ul li{height:36px;background:url(img/xiaomibeijing1.png) no-repeat center right;float:left;padding-right:18px;margin-right:18px;}
+	.t .topleft ul li a{color:#8c8c8c;text-decoration:none;}
+	.t .topright{float:right;}
+	.t .topright ul.clearfix{background:url(img/xiaomibeijing1.png) no-repeat 68px center;}
+	.t .topright ul li {float:left;margin-left:30px;}
+	.t .topright ul li a{color:#8c8c8c;text-decoration:none;}
+	
+	.header.clearfix{width:930px;margin:0 auto;position:relative;margin-bottom:15px;}
+	.header .hl{background:url(img/xiaomi.png) no-repeat ;width:70px;height:70px;text-indent:-9999px;float:left;}
+	.header .hc{background:url(img/biaoge.png) no-repeat;float:left;width:424px;height:40px;margin-left:300px;margin-top:30px;}
+	.header .hr{}
+	.header .hr .hrb{width:126px;height:40px;background:#ffdb3d;float:right;margin-top:30px;}
+	.header .hr .hrb a{background:url(img/gouwuche.png) no-repeat 34px center;height:40px;line-height:40px;text-decoration:none;padding-left:51px;font-weight:微软雅黑;}
+	.header .hr .hrt{background:url(img/naozhong.png) no-repeat;position:absolute;right:0;top:0px;font-size:12px;padding-left:23px;}
+	.content.clearfix{width:930px;height:642px;margin:0 auto;}
+	.content.clearfix .conle{float:left;width:248px;height:642px;}
+	.content.clearfix .conle .conle-t{width:229px;font-size:18px;font-family:微软雅黑;height:50px;line-height:50px;color:#FFF;background:#ff4a00;padding-left:19px;}
+	.content.clearfix .conle dl{width:226px;height:73px;border:1px solid #dfdfdf;border-top:none;padding-left:20px;}
+	.content.clearfix .conle dl dt{padding-top:18px;display:block;padding-bottom:9px;}
+	.content.clearfix .conle dl dt a{font-size:14px;text-decoration:none;color:#ff4a00;fonr-family:微软雅黑;}
+	.content.clearfix .conle dl dt dd{}
+	.content.clearfix .conle dl dd a{font-size:13px;text-decoration:none;color:#6d6d6d;font-family:微软雅黑;}
+	.content.clearfix .conri{float:right;}
+	.content.clearfix .conri ul.clearfix{width:682px;height:50px;background:#404144;}
+	.content.clearfix .conri .bottom1  ul.clearfix{background:#9F3;}
+	.content.clearfix .conri ul.clearfix li{height:50px;line-height:50px;float:left;padding-left:11px;padding-right:11px;}
+	.content.clearfix .conri ul.clearfix li a{color:#FFF;text-decoration:none;display:block;}
+	
+	.content.clearfix .conri a.img{display:block;width:682px;height:420px;}
+	
+	.content.clearfix .conri .bottom1{width:682px;height:172px;} 
+	.content.clearfix .conri .bottom1 ol.clearfix li{width:226px;height:148px;float:left;border:1px solid #dfdfdf;background:#f3f3f3;padding-top:22px;border-left:none;}
+	.conri .bottom li a{}
+	.conri .bottom1 li .div1{font-size:16px;font-weight:bold;font-family:微软雅黑;color:#000;padding-left:33px;text-decoration:none;}
+	.conri .bottom1 li .div2{font-size:11px;color:#6c6c6c;font-family:微软雅黑;padding-left:46px;text-decoration:none;}
+	.conri .bottom1 li .img1{width:226px;height:107px;background:url(img/phone1.png);display:block;}
+	.conri .bottom1 li.center .div1{ padding-left: 52px;}
+	.conri .bottom1 li.center .div2{ padding-left: 52px;}
+	
+	.conri .bottom1 li.center .img1{width:226px;height:107px;background:url(img/phone2.png);display:block;}
+	.conri .bottom1 li.right .div1{padding-left:24px;}
+	.conri .bottom1 li.right .div2{padding-left:25px;}
+	.conri .bottom1 li.right .img1{width:226px;height:107px;background:url(img/phone3.png);display:block;}
+	
+	.two{width:930px;margin:0 auto;}
+	.title{height:52px;margin-top:9px;overflow:hidden;}
+	.title .t-num{float:left;}
+	.title .text1{font-size:18px;font-family:微软雅黑;color:#000;line-height:52px;float:left;display:block;padding-right:12px;}
+	.title .text2{font-size:13px;font-family:微软雅黑;color:#808080;line-height:52px;float:left;display:block;}
+	.title div.text3{float:right;overflow:hidden;height:52px;margin-top:30px;}
+	.title a.t3{width:28px;height:18px;border:1px solid #dfdfdf;background:url(img/fuhao1.png) no-repeat center;display:block;float:left;}
+	.title a.t4{width:28px;height:18px;border:1px solid #dfdfdf;background:url(img/fuhao2.png) no-repeat center;display:block;float:right;}
+	.two ul.clearfix{width:932px;height:310px;margin-bottom:13px;}
+	.two ul li{width:308px;height:308px;border:1px solid #dfdfdf;float:left;}
+	.two ul li a.shouji img{display:block;width:146px;height:177px;padding-left:81px;padding-top:30px;}
+	.two ul li a.wenzi1{font-size:16px;color:#000;text-decoration:none;padding-left:70px;padding-top:20px;display:block;}
+	.two ul li a.wenzi2{font-size:12px;color:#9b9b9b;text-decoration:none;padding-left:51px;padding-top:8px;display:block;}
+	
+	
+	.three{width:930px;margin:0 auto;}
+	.three .l1{height:52px;margin-top:13px;overflow:hidden;line-height:52px;}
+	.three .l1 span{font-size:16px;color:#000;float:left;font-family:微软雅黑;height:52px;}
+	.three .l1 a{background:url(img/biaohao.png) no-repeat right;float:right;display:block;}
+	.three .l1 a span{font-family:微软雅黑;text-decoration:none;font-size:13px;color:#000;float:left;padding-right:24px;}
+	.three .b1{width:928px;height:932px;overflow:hidden;}
+	.three .b1 .ble{width:620px;float:left;}
+	.three .b1 .ble-top{width:620px;height:310px;border:1px solid #dfdfdf;position:relative;}
+	.three .b1 .ble-top a.ziti1{font-size:32px;font-family:微软雅黑;font-weight:bold;padding-left:28px;padding-top:66px;display:block;text-decoration:none;color:#000;}
+	
+	.three .ble-top .wenzi2{font-size:15px;font-family:微软雅黑;color:#6a6a6a;padding-left:26px;padding-top:14px;display:block;text-decoration:none;}
+	.three .ble-top .shuzi{font-size:22px;color:#353535;padding-left:33px;padding-top:28px;display:block;text-decoration:none;}
+	.three .ble-top img{width:321px;height:177px;position:absolute;right:27px;bottom:28px;}
+	.three .ble-bottom{width:622px;height:622px;}
+	.three .ble-bottom ul.clearfix{}
+	.three .ble-bottom ul li{width:309px;height:309px;border:1px solid #dfdfdf;border-top:none;float:left;position:relative;}
+	.three .ble-bottom ul li a{width:154px;height:24px;line-height:24px;font-size:15px;font-family:微软雅黑;color:#000;padding:30px 0 0 30px;text-decoration:none;display:block;font-weight:bold;}
+	.three .ble-bottom ul li a span{color:#dfdfdf;text-decoration:line-through;}
+	.three .ble-bottom ul li a img{width:155px;height:191px;padding:15px 45px 26px 45px;display:inline-block;}
+	.three .ble-bottom ul li .bug{width:70px;height:20px;background:#f32f39;font-size:12px;color:#FFF;position:absolute;right:26px;top:0px;text-align:center;}
+	.three .ble-bottom ul li.liang{margin:0;padding:0;width:309px;height:309px}
+	.three .ble-bottom ul li div.half1{width:309px;height:154px;border-bottom:1px solid #dfdfdf;overflow:hidden;}
+	
+	
+	.three .ble-bottom ul li.liang a{width:112px;height:24px;line-height:24px;font-size:15px;font-family:微软雅黑;color:#000;padding:0;text-decoration:none;display:block;font-weight:bold;}
+	.three .ble-bottom ul li.liang .half1 .half-l{width:127px;display:block;float:left;padding-left:30px;padding-top:30px;}
+	.three .ble-bottom ul li.liang .half1 .half-r{width:124px;float:right;padding-right:20px;}
+	.three .ble-bottom ul li div img{width:78px;height:120px;}
+	
+	.three .ble-bottom ul li div.half2{width:309px;height:154px;border-bottom:1px solid #dfdfdf;overflow:hidden;}
+	
+	
+	.three .ble-bottom ul li.liang a{width:112px;height:24px;line-height:24px;font-size:15px;font-family:微软雅黑;color:#000;padding:0;text-decoration:none;display:block;font-weight:bold;}
+	.three .ble-bottom ul li.liang .half2 .half-l{width:127px;display:block;float:left;padding-left:30px;padding-top:30px;}
+	.three .ble-bottom ul li.liang .half2 .half-r{width:124px;float:right;padding-right:15px;}
+	.three .ble-bottom ul li.liang .half2  div img{width:78px;height:120px;}
+	.three .ble-bottom ul li.si a{width:167px;}
+	
+	.three .b1 .bri{float:right;width:305px;height:932px;border:1px solid #dfdfdf;}
+	.three .bri .clearfix{width:275px;height:126px;background:url(img/nnnn1.png);border-bottom:1px solid #dfdfdf;padding-left:30px;position:relative;font-family:宋体;}
+	.three .bri .clearfix h2{font-size:18px;color:#222;padding-top:35px;}
+	.three .bri .clearfix h3{font-size:14px;color:#f32f39;padding-top:10px;padding-bottom:6px;}
+	.three .bri .clearfix h3 span{font-size:14px;color:#6d6d6d;text-decoration:line-through;padding-left:4px;}
+	.three .bri .clearfix h4{font-size:11px;color:#808080;}
+	.three .bri .clearfix i{width:70px;height:20px;background:#f32f39;text-align:center;font-style:normal;position:absolute;left:30px;top:0;color:#FFF;font-family:微软雅黑;}
+	.three .bri .clearfix.x{background:url(img/nnmm.png);}
+	.three .bri .clearfix.y{background:url(img/kuwan.png);}
+	.three .bri .img{width:305px;height:278px;background:url(img/huafei11.png);border-bottom:1px solid #dfdfdf;}
+	.three .bri .xinwen{width:245px;height:270px;border-bottom:1px solid #dfdfdf;padding-left:30px;padding-right:30px;}
+	.three .bri .xinwen h2{font-size:16px;height:38px;line-height:38px;padding-top:20px;}
+	.three .bri .xinwen ul{}
+	.three .bri .xinwen li{width:234px;height:45px;border-bottom:1px solid #dfdfdf;font-size:14px;line-height:45px;background:url(img/nkuai.png) no-repeat left center;padding-left:11px;}
+	.three .bri .xinwen li a{width:6px;height:11px;background:url(img/nnn111.png) no-repeat;display:block;float:right;}
+	
+	
+	.four{width:930px;margin:0 auto;}
+	.four .t1{height:52px;margin-top:13px;overflow:hidden;line-height:52px;font-size:16px;color:#000;float:left;font-family:微软雅黑;}
+	.four .b1{width:928px;height:620px;overflow:hidden;}
+	.four .b1 .ble{width:620px;float:left;}
+	.four .b1 .ble-top{width:618px;height:308px;border:1px solid #dfdfdf;background:url(img/qinglv.png);}
+	.four .b1 .ble-top a.ziti1{font-size:32px;font-family:微软雅黑;font-weight:bold;padding-left:28px;padding-top:66px;display:block;text-decoration:none;color:#000;}
+	
+	.four .ble-top .wenzi2{font-size:15px;font-family:微软雅黑;color:#6a6a6a;padding-left:26px;padding-top:14px;display:block;text-decoration:none;}
+	.four .ble-top .shuzi{font-size:22px;color:#353535;padding-left:33px;padding-top:28px;display:block;text-decoration:none;}
+	
+	.four .ble-bottom{width:620px;height:310px;}
+	.four .ble-bottom ul.clearfix{}
+	.four .ble-bottom ul.clearfix li{width:308px;height:308px;border:1px solid #dfdfdf;border-top:none;float:left;}
+	.four .ble-bottom ul.clearfix li a{width:201px;height:24px;line-height:24px;font-size:14px;font-family:微软雅黑;color:#000;padding:30px 0 0 30px;text-decoration:none;display:block;font-weight:bold;float:left;}
+	
+	.four .ble-bottom ul.clearfix li a img{width:155px;height:191px;padding:15px 45px 26px 45px;display:block;}
+	.four .bri{float:right;width:307px;height:617px;border:1px solid #dfdfdf;border-left:none;}
+	.four .bri .bri-w{width:307px;height:103px;line-height:103px; }
+	.four .bri .bri-w h2{font-size:24px;font-family:微软雅黑;color:#000;padding-left:30px;}
+	.four .bri .bri-w h2 span{color:#ff4a00;}
+	.four .bri .bri-clearfix{}
+	.four .bri .bri-clearfix li{width:277px;height:101px;line-height:102px;padding-left:30px;overflow:hidden;background:url(img/tt1.png);border-top:1px solid #dfdfdf; }
+	.bri .bri-clearfix li .left{width:20px;height:101px;color:#ff4a00;font-size:20px;float:left;}
+	.bri .bri-clearfix li .center{height:48px;font-size:13px;padding-right:14px;float:left;}
+	
+	.four .bri .bri-clearfix li.two{background:url(img/tt2.png);}
+	.four .bri .bri-clearfix li.three{background:url(img/tt3.png);}
+	.four .bri .bri-clearfix li.four{background:url(img/tt5.png);}
+	.four .bri .bri-clearfix li.four .left{color:#6d6d6d;}
+	.four .bri .bri-clearfix li.five{background:url(img/tt6.png); }
+	.four .bri .bri-clearfix li.five .left{color:#6d6d6d;}
+	
+	
+	
+	.five{width:930px;margin:0 auto;}
+	.five .t1{height:52px;margin-top:13px;line-height:52px;font-size:16px;color:#000;font-family:微软雅黑;}
+	.five .p1{width:930px;height:410px;border:1px solid #dfdfdf;border-right:none;}
+	.five .p1 ul.clearfix{}
+	.five .p1 ul.clearfix li{width:309px;height:410px;border-right:1px solid #dfdfdf;float:left;}
+	.five .p1 li .b-top{height:52px;padding-left:30px;padding-top:33px;}
+	.five .p1 li .b-top h2{font-size:14px;color:#333;}
+	.five .p1 li .b-top .xing{background:url(img/xingxing1.png) no-repeat left;}
+	.five .p1 li .b-top .xing span{font-size:12px;color:#8c8c8c;padding-left:84px;}
+	.five .p1 li .b-top div{font-size:13px;color:#333;}
+	.five .p1 li .picture{background:url(img/hougai1.png);width:309px;height:238px;}
+	.five .p1 li .border-text{width:274px;height:52px;background:#f3f3f3;margin-left:10px;margin-top:20px;line-height:20px;font-size:11px;color:#6d6d6d;padding-top:4px;padding-left:15px;}
+	
+	
+	
+	
+	.six{width:930px;margin:0 auto;}
+	.six.t1{height:52px;margin-top:13px;line-height:52px;font-size:16px;color:#000;font-family:微软雅黑;}
+	.six .p1{width:930px;height:308px;border:1px solid #dfdfdf;border-right:none;}
+	.six .p1 ul.u-clearfix li{width:309px;height:308px;border-right:1px solid #dfdfdf;float:left;position:relative;}
+	.six .p1 ul li a{width:154px;height:24px;line-height:24px;font-size:15px;font-family:微软雅黑;color:#000;padding:30px 0 0 30px;text-decoration:none;display:block;font-weight:bold;}
+	.six .p1 ul li a span{color:#dfdfdf;text-decoration:line-through;}
+	.six .p1 ul li .picture{background:url(img/cunchuka11.png);width}
+	.six .p1 ul li .bug{width:50px;height:20px;background:#f32f39;color:#FFF;font-size:12px;line-height:20px;padding-left:20px;position:absolute;left:215px;top:0;}
+	
+	
+	
+	.seven{width:930px;margin:0 auto;}
+	.seven .t1{height:52px;margin-top:13px;line-height:52px;font-size:16px;color:#000;font-family:微软雅黑;}
+	.seven .p1{width:930px;height:410px;border:1px solid #dfdfdf;border-right:none;}
+	.seven .p1 ul.clearfix{}
+	.seven .p1 ul.clearfix li{width:309px;height:400px;border-right:1px solid #dfdfdf;float:left;padding-top:10px;}
+	.seven .p1 li .b-top{height:52px;padding-left:30px;padding-top:33px;padding-bottom:35px;}
+	.seven .p1 li .b-top h3{font-size:14px;color:#333;padding-bottom:7px;}
+	
+	.seven .p1 li .b-top .xing1{font-size:12px;color:#333;padding-bottom:7px;}
+	.seven .p1 li .b-top div{font-size:11px;color:#333;}
+	.seven .p1 li .picture1{background:url(img/zhu.png);width:308px;height:194px;}
+	.seven .p1 li .border-text{width:274px;height:52px;background:#f3f3f3;margin-left:10px;line-height:20px;font-size:11px;color:#6d6d6d;padding-left:15px;}
+	.seven .p1 li .picture2{background:url(img/wanwangmeixiangdao.png);width:308px;height:192px;}
+	.seven .p1 li .picture3{background:url(img/xueqiu.png);width:308px;height:193px;}
+	
+	
+	
+	.eight{width:930px;margin:0 auto;}
+	.eight  ul.e-clearfix{width:928px;height:335px;border:1px solid #dfdfdf;border-right:none; margin-top:64px;}
+	.eight  ul.e-clearfix li{width:308px;height:335px;border-right:1px solid #dfdfdf;float:left;}
+	.eight  ul.e-clearfix li .text-e{height:60px;width:213px;font-size:14px;padding-left:30px; padding-top:25px;font-family:微软雅黑;font-weight:bold;}
+	.eight  ul.e-clearfix li .e-picture{background:url(img/tuodan.png);width:308px;height:220px;}
+	
+	.eight  ul.e-clearfix li.two .text-e{height:60px;width:56px;font-size:14px;padding-left:30px; padding-top:25px;font-family:微软雅黑;font-weight:bold;}
+	.eight  ul.e-clearfix li.two .e-picture{background:url(img/wusuobuneng.png);width:308px;height:220px;}
+	
+	.eight  ul.e-clearfix li.three .text-e{height:60px;width:42px;font-size:14px;padding-left:30px; padding-top:25px;font-weight:bold;}
+	.eight  ul.e-clearfix li.three .e-picture{background:url(img/6se.png);width:308px;height:220px;}
+	
+	
+	
+	
+	.nine{width:930px;margin:0 auto;}
+	.nine  ul.n-clearfix{width:930px;height:108px;border-bottom:1px solid #dfdfdf;margin-top:111px;float:left;}
+	.nine ul.n-clearfix li{width:178px;height:107px;margin-right:8px;float:left;}
+	.nine  ul.n-clearfix .n-p{background:url(img/banzi11.png);width:178px;height:48px;}
+	.nine  ul.n-clearfix .n-t{font-size:14px;color:#000;text-align:center;text-decoration:none;display:block;}
+	.nine  ul.n-clearfix .n-two .n-p{background:url(img/tubiao111.png);width:178px;height:49px;}
+	.nine  ul.n-clearfix .n-three .n-p{background:url(img/tubiao333.png);}
+	.nine  ul.n-clearfix .n-four .n-p{background:url(img/tupian4.png);}
+	.nine  ul.n-clearfix .n-five .n-p{background:url(img/tupian5.png);}
+	
+	
+	.ten{width:930px;margin:0 auto;}
+	
+	.ten ul.clearfix{width:930px;height:120px;}
+	.ten ul li{width:132px;height:120px;border-right:1px solid #dfdfdf;padding-left:17px;float:left;margin-top:40px;margin-bottom:40px;}
+	.ten ul li a{color:#3c3c3c;text-decoration:none;}
+	.ten ul li h2{font-size:17px;padding-top:5px;padding-bottom:18px;}
+	.ten ul li h3{font-size:14px;padding-bottom:13px;}
+	.ten ul li h4{font-size:13px;padding-bottom:15px;}
+	.ten ul li h5{font-size:13px;}
+	.ten div.bottom{width:176px;height:120px;border-right:none;position:relative;float:right;margin-top:40px;margin-bottom:40px;}
+	
+	.ten  div.bottom  a{text-decoration:none;display:block;text-align:center;}	
+	.ten  div.bottom  h2{font-size:20px;padding-top:5px;padding-bottom:12px;color:#000;font-weight:bold;font-family:微软雅黑;}
+	
+	.ten  div.bottom  h3{font-size:12px;padding-bottom:8px;color:#6d6d6d;}
+	
+	.ten  div.bottom  h4{font-size:12px;padding-bottom:17px;color:#6d6d6d;}
+	
+	.ten  div.bottom  h5{font-size:11px;color:#FFF;background:#ff4a00;width:115px;height:30px;position:absolute;left:33px;bottom:0px;line-height:30px;}
+	
+	
+	
+	.eleven{width:930px;border-top:1px solid #dfdfdf; margin:0 auto;overflow:hidden;}
+	.eleven .start{width:930px;height:44px;margin-top:30px;margin-bottom:15px;}
+	.eleven .zi{width:666px;font-size:12px;height:44px;line-height:22px;font-family:微软雅黑;color:#000;float:left;}
+	select{width:198px;height:38px;border:1px solid #dfdfdf;-font-size:11px;color:#dfdfdf;padding-left:10px;margin-left:65px;}
+
+	.eleven .end{overflow:hidden;padding-bottom:65px;}
+	.eleven .end a{padding-right:4px;}
+	.eleven .end .img1{background:url(img/biaozhi1.png);display:block;width:54px;height:20px;float:left;}
+	.eleven .end .img2{background:url(img/biaoge2.png);display:block;width:57px;height:20px;float:left;}
+	.eleven .end .img3{background:url(img/biaoge3.png);display:block;width:42px;height:18px;float:left;}
+	
+	
+	
+	
+	
+	
+</style>
+</head>
+
+<body>
+	    	<div class="top ">
+			<div class="t clearfix">
+        		<div class="topleft">
+            		<ul class="clearfix">
+						<li><a href="">小米网</a></li>
+						<li><a href="">MIUI</a></li>
+						<li><a href="">米聊</a></li>
+						<li><a href="">游戏</a></li>
+						<li><a href="">多看阅读</a></li>
+						<li><a href="">云服务</a></li>
+						<li><a href="">小米网移动版</a></li>
+						<li><a href="">Select Region</a></li>
+                	</ul>
+            	</div>
+        		<div class="topright">
+            		<ul class="clearfix">
+						<li><a>登陆</a></li>
+						<li><a>注册</a></li>
+						
+                    
+                	</ul>
+            	</div>
+			</div>
+        </div>
+
+	    <div class="header clearfix">
+            <div class="hl">小米网</div>
+            <div class="hc"></div>
+            <div class="hr">
+                <div class="hrt">11月18日预约开放购买</div>
+                <div class="hrb">
+            	    <a href="">购物车</a></div>
+            </div >
+			
+		</div>
+	</div>
+   
+   <div class="content clearfix">
+   		<div class="conle">
+        	
+            	<h2 class="conle-t">全部商品分类</h2>
+            	<dl class="conle-b">
+            		<dt><a href="">购买手机</a></dt>
+                	<dd class="d clearfix">
+                    	<a href="">小米4</a>
+                        <a href="">小米3</a>
+                        <a href="">红米</a>
+                        <a href="">红米Note</a>
+                    </dd>
+            	</dl>
+                <dl class="conle-b">
+            		<dt><a href="">都买电视与平板</a></dt>
+                	<dd class="d clearfix">
+                    	<a href="">小米电视</a>
+                        <a href="">小米盒子</a>
+                        <a href="">小米平板</a>
+                       
+                    </dd>
+            	</dl>
+                <dl class="conle-b">
+            		<dt><a href="">后盖与个性化配件</a></dt>
+                	<dd class="d clearfix">
+                    	<a href="">米键</a>
+                        <a href="">后盖</a>
+                        <a href="">贴纸</a>
+                        <a href="">手机支架</a>
+                    </dd>
+            	</dl>
+                <dl class="conle-b">
+            		<dt><a href="">保护套与贴膜</a></dt>
+                	<dd class="d clearfix">
+                    	<a href="">保护套/保护壳</a>
+                        <a href="">贴膜</a>
+                        <a href="">防尘塞</a>
+                        
+                    </dd>
+            	</dl>
+                <dl class="conle-b">
+            		<dt><a href="">移动电源与电池</a></dt>
+                	<dd class="d clearfix">
+                    	<a href="">小米移动电源</a>
+                        <a href="">电池</a>
+                        <a href="">充电器</a>
+                       
+                    </dd>
+            	</dl>
+                <dl class="conle-b">
+            		<dt><a href="">路由器与智能家庭</a></dt>
+                	<dd class="d clearfix">
+                    	<a href="">小米路由器</a>
+                        <a href="">随身WiFi</a>
+                        <a href="">智能家庭</a>
+                       
+                    </dd>
+            	</dl>
+                <dl class="conle-b">
+            		<dt><a href="">购买手机</a></dt>
+                	<dd class="d clearfix">
+                    	<a href="">小米活塞耳机</a>
+                        <a href="">更多耳机</a>
+                        <a href="">音箱</a>
+  
+                    </dd>
+            	</dl>
+                <dl class="conle-b">
+            		<dt><a href="">小米生活方式</a></dt>
+                	<dd class="d clearfix">
+                    	<a href="">小米手环</a>
+                        <a href="">服装</a>
+                        <a href="">血压计</a>
+                        <a href="">米兔</a>
+                    </dd>
+            	</dl>
+        	
+        </div>
+        <div class="conri">
+        	<ul class="clearfix">
+            	<li><a href="">首页</a></li>
+                <li><a href="">小米手机</a></li>
+                <li><a href="">红米</a></li>
+                <li><a href="">小米平板</a></li>
+                <li><a href="">小米电视</a></li>
+                <li><a href="">盒子</a></li>
+                <li><a href="">路由器</a></li>
+                <li><a href="">合约机</a></li>
+                <li><a href="">服务</a></li>
+                <li><a href="">社区</a></li>
+            </ul>
+        	<a href="" class="img">
+            	<img src="img/beijing.png" alt="" />
+                
+            </a>
+            <div class="bottom1">
+  				<ol class="clearfix">
+           			 <li>
+                		
+                            <a href="" class="div1">红米4G手机 现货购买</a>
+                            <a href="" class="div2">可选红米1s 红米Note</a>
+                            <a href="" class="img1"></a>
+                	
+                	</li>
+                     <li class="center">
+                		
+                            <a href="" class="div1">小米3 特价1499</a>
+                            <a href="" class="div2">直降200，免预约购买</a>
+                            <a href="" class="img1"></a>
+                	
+                	</li>
+                     <li class="right">
+                		
+                            <a href="" class="div1">小米电视2 单售3399元</a>
+                            <a href="" class="div2">顶配49英寸4k电视，降价比之王</a>
+                            <a href="" class="img1"></a>
+                	
+                	</li>
+                 </ol>   
+            </div>
+           		
+        </div>
+   
+   </div>
+   <div class="two">	
+   		<div class="title">
+        	<div class="t-num">
+                <span class="text1">小米明星单品</span>
+                <span class="text2">根据机型选配件</span>
+            </div>
+            <div class="text3">
+                <a href=""class="t3"></a>
+                <a href=""class="t4"></a>
+            </div>
+        </div>
+        <ul class="clearfix">
+        	<li>
+            	<a href=""class="shouji">
+                	<img src="img/shoujibei.png" alt="" /></a>
+            	<a href=""class="wenzi1">1040mAh小米移动电源</a>
+            	<a href=""class="wenzi2">全铝合金金属外壳 LG/三星等优质电芯</a>
+            </li>
+            <li>
+            	<a href=""class="shouji">
+                	<img src="img/shoujibei.png" alt="" /></a>
+            	<a href=""class="wenzi1">1040mAh小米移动电源</a>
+            	<a href=""class="wenzi2">全铝合金金属外壳 LG/三星等优质电芯</a>
+            </li>
+            <li>
+            	<a href=""class="shouji">
+                	<img src="img/shoujibei.png" alt="" /></a>
+            	<a href=""class="wenzi1">1040mAh小米移动电源</a>
+            	<a href=""class="wenzi2">全铝合金金属外壳 LG/三星等优质电芯</a>
+            </li>
+            
+        </ul>
+   </div>
+   <div class="three">
+   		<div class="l1">
+   			<span>新品上架</span>
+            <a href=""><span>更多</span></a>
+        </div>
+        <div class="b1 ">
+        	<div class="ble">
+            	<div class="ble-top">
+                	<a href="" class="ziti1">iHealth智能血压计</a>
+                    
+                    <a href="" class="wenzi2">父母在家一点就测 测量结果云端同步</a>
+                    <a href="" class="shuzi">199元</a>
+                    <a href="" class="tupian">
+                    	<img src="img/heatha.png" alt="" />
+                    </a>
+                </div>
+                <div class="ble-bottom">
+                	<ul class="clearfix">
+                    	<li>
+                        	<a href="">大人物米兔圆领套头卫衣99元
+                        	<span>129元</span></a>
+                            <a href="">
+                            	<img src="img/yifu.png" alt="" />
+                            </a>
+                            <div class="bug">包邮</div>
+                        </li>
+                        
+                      	<li class="liang">
+                        	<div class="half1">
+                                <a href=""class="half-l">QCY运动蓝牙耳机129元
+                               	</a>
+                                <a href="" class="half-r">
+                                    <img src="img/nnnn.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="half2">
+                                <a href="" class="half-l" >小米手机二合一镜头59元
+                                </a>
+                                <a href="" class="half-r">
+                                    <img src="img/camerahead.png" alt="" />
+                                </a>
+                            </div>
+                        </li>
+                    
+                    	<li class="san">
+                        	<a href="">铁三角CLR100耳机118元
+                        	</a>
+                            <a href="">
+                            	<img src="img/erji.png" alt="" />
+                            </a>
+                           
+                        </li>
+                    
+                    	<li class="si">
+                        	<a href="">红米至简翻盖支架保护套49元
+                        	</a>
+                            <a href="">
+                            	<img src="img/phonetao.png" alt="" />
+                            </a>
+                            
+                        </li>
+                    
+                    
+                    </ul>
+                </div>
+            </div>
+            <div class="bri">
+            	<div class="clearfix">
+                	<h2>红米3D月球系列</h2>
+                    <h3>29元<span>39元</span></h3>
+                    <h4>上午十点开始秒杀</h4>
+                    <i>特价秒杀</i>
+               </div>
+               <div class="clearfix x">
+                	<h2>特惠配件套装</h2>
+                    <h3>手机必备配件组合购买</h3>
+                    <h4>实惠更优惠</h4>
+                   
+               </div>
+               <div class="clearfix y">
+                	<h2>我爱酷玩</h2>
+                    <h3>邂逅炫酷的电子产品</h3>
+                    <h4>结交趣味相投的朋友</h4>
+               </div>
+               
+               <div class="img"></div>
+               <div class="xinwen" >
+               		<h2>新闻公告</h2>
+                    <ul>
+                    	<li>企业用户采购通道
+                        	<a href=""></a>
+                        </li>
+                        <li>小米手机防伪查询
+                        	<a href=""></a>
+                        </li>
+                        <li>小米手机官方版
+                        	<a href=""></a>
+                        </li>
+                        <li>小米3（64GB）用户购机补偿
+                        	<a href=""></a>
+                        </li>
+                    </ul>
+                            
+                         
+                        </li>
+                    </ul>
+               </div>  
+                    
+               
+            </div>
+        </div>
+   </div>
+   <div class="four">
+   		<div class="t1">
+   			大家都喜欢</div>
+            
+        
+        <div class="b1 ">
+        	<div class="ble">
+            	<div class="ble-top">
+                	<a href="" class="ziti1">小米T恤换季特卖</a>
+                    
+                    <a href="" class="wenzi2">舒适纯棉面料 多色经典团案</a>
+                    <a href="" class="shuzi">全场29元</a>
+                    <a href="" class="tupian"> </a>
+                    	
+                   
+                </div>
+                <div class="ble-bottom">
+                	<ul class="clearfix">
+                    	
+                    	<li >
+                        	<a href="">先锋SE-MJ512折叠式头戴耳机118元
+                        	</a>
+                            <a href="">
+                            	<img src="img/whiteerji.png" alt="" />
+                            </a>
+                           
+                        </li>
+                    
+                    	<li >
+                        	<a href="">红米高透防划贴膜（单片装）9.9元
+                        	</a>
+                            <a href="">
+                            	<img src="img/shoujimo.png" alt="" />
+                            </a>
+                            
+                        </li>
+                    
+                    
+                    </ul>
+                </div>
+            </div>
+            <div class="bri">
+            	<div class="bri-w">
+                	<h2><span>HOT</span>热销商品排行</h2>
+                   
+               		<ul class="bri-clearfix">
+               			<li class="one">
+                        	<div class=left>1</div>
+                            <div class=center>5200mAh移动电源49元</div>
+                            <div class=right></div>	
+                        </li> 
+                        <li class="two">
+                        	<div class=left>2</div>
+                            <div class=center>
+                            	<div class="text1">5200mAh移动电源</div>
+                                <div class="text2">49元</div>
+                            <div class=right></div>	
+                        </li>   
+                            
+                            <li class="three">
+                        	<div class=left>3</div>
+                            <div class=center>5200mAh移动电源49元</div>
+                            <div class=right></div>	
+                        </li>   
+                            
+                            <li class="four">
+                        	<div class=left>4</div>
+                            <div class=center>5200mAh移动电源49元</div>
+                            <div class=right></div>	
+                        </li>   
+                            
+                            <li class="five">
+                        	<div class=left>5</div>
+                            <div class=center>5200mAh移动电源49元</div>
+                            <div class=right></div>	
+                        </li>   
+                              
+                            
+                            
+                        
+                	
+                    </ul>
+               </div>  
+                    
+               
+            </div>
+        </div>
+   </div>
+   <div class="five">
+   		<div class="t1">热评产品</div>
+        <div class="p1">
+        	<ul class="clearfix">
+            	<li>
+                	<div class="b-top">
+                        <h3>红米色彩主题后盖</h3>
+                        <div class="xing"><span>1231人好评</span></div>
+                        <div>39元</div>
+                    </div>
+                    <div class="picture"></div>
+                    <div class="border-text">后盖图案非常好看，不愧是官方出品，和机型严丝合缝很赞！</div>
+               </li>
+               <li>
+               			<div class="b-top">
+                        <h3>红米色彩主题后盖</h3>
+                        <div class="xing"><span>1231人好评</span></div>
+                        <div>39元</div>
+                    </div>
+                    <div class="picture"></div>
+                    <div class="border-text">后盖图案非常好看，不愧是官方出品，和机型严丝合缝很赞！</div>
+               </li>
+               <li>
+               			<div class="b-top">
+                        <h3>红米色彩主题后盖</h3>
+                        <div class="xing"><span>1231人好评</span></div>
+                        <div>39元</div>
+                    </div>
+                    <div class="picture"></div>
+                    <div class="border-text">后盖图案非常好看，不愧是官方出品，和机型严丝合缝很赞！</div>
+               </li>
+            </ul>
+        
+        </div>
+        
+        
+        <div class="six">
+        	<div class="t1">特价产品</div>
+        	<div class="p1">
+            	<ul class="u-clearfix">
+                	<li>
+                        	<a href="">SanDisk 32GB储存卡89元
+                        	<span>100元</span></a>
+                            <div class="picture"></div>
+                            <div class="bug">省20元</div>
+                    </li>
+                    <li>
+                        	<a href="">SanDisk 32GB储存卡89元
+                        	<span>100元</span></a>
+                            <div class="picture"></div>
+                            <div class="bug">省20元</div>
+                    </li>
+                    <li>
+                        	<a href="">SanDisk 32GB储存卡89元
+                        	<span>100元</span></a>
+                            <div class="picture"></div>
+                            <div class="bug">省20元</div>
+                    </li>
+              
+                </ul>
+            </div>
+        </div>
+        
+<div class="seven">
+   		<div class="t1">多看图书</div>
+        <div class="p1">
+        	<ul class="clearfix">
+            	<li>
+                	<div class="b-top">
+                        <h3>《参与感:小米口碑米内部营销手册》</h3>
+                        <div class="xing1">黎万强（小联合米创始人）</div>
+                        <div>9.9元</div>
+                    </div>
+                    <div class="picture1"></div>
+                    <div class="border-text">后盖图案非常好看，不愧是官方出品，和机型严丝合缝很赞！</div>
+               </li>
+               <li>
+                	<div class="b-top">
+                        <h3>《万万没想到:生活才是喜剧》</h3>
+                        <div class="xing1">有时右逝 叫兽易小星</div>
+                        <div>3.99元</div>
+                    </div>
+                    <div class="picture2"></div>
+                    <div class="border-text">后盖图案非常好看，不愧是官方出品，和机型严丝合缝很赞！</div>
+               </li>
+               <li>
+                	<div class="b-top">
+                        <h3>《雪球专刊:美女为何爱渣男》</h3>
+                        <div class="xing1">雪球用户</div>
+                        <div>免费</div>
+                    </div>
+                    <div class="picture3"></div>
+                    <div class="border-text">后盖图案非常好看，不愧是官方出品，和机型严丝合缝很赞！</div>
+               </li>
+           </ul>
+                
+       </div> 
+  </div>
+  <div class="eight">
+   		<ul class="e-clearfix">
+            <li>
+               <div class="text-e">光棍节想脱单吗？告白字体0元起6米币</div>
+               <div class="e-picture"></div>
+            </li>
+            <li class="two">
+               <div class="text-e">无所不能六米币</div>
+               <div class="e-picture"></div>
+            </li>
+            <li class="three">
+               <div class="text-e">六色六米币</div>
+               <div class="e-picture"></div>
+            </li>
+        </ul>
+  </div>
+  <div class="nine">
+  		<ul class="n-clearfix">
+        	<li class="n-one">
+            	<div class="n-p"></div>
+                <a href="" class="n-t">1小时快修服务</a>
+                
+            </li>
+            <li class="n-two">
+            	<div class="n-p"></div>
+                <a href="" class="n-t">7天无理由退货</a>
+                
+            </li>
+            <li class="n-three">
+            	<div class="n-p"></div>
+                <a href="" class="n-t">15天免费换货</a>
+                
+            </li>
+            <li class="n-four">
+            	<div class="n-p"></div>
+                <a href="" class="n-t">满150元包邮</a>
+                
+            </li>
+            <li class="n-five">
+            	<div class="n-p"></div>
+                <a href="" class="n-t">520余家售后网点</a>
+                
+            </li>
+        </ul>    
+  
+  </div>
+  
+  
+  <div class="ten">
+  	<div class="box">
+  		<ul class="clearfix">
+        	<li>
+            	<a href="" ><h2>帮助中心</h2></a>
+                <a href=""><h3>购物指南</h3></a>
+                <a href=""><h4>支付方式</h4></a>
+                <a href=""><h5>配送方式</h5></a>
+            
+            </li>
+            <li>
+            	<a href="" ><h2>服务支持</h2></a>
+                <a href=""><h3>售后政策</h3></a>
+                <a href=""><h4>自助服务</h4></a>
+                <a href=""><h5>相关下载</h5></a>
+            
+            </li>
+            <li>
+            	<a href=""><h2>小米之家</h2></a>
+                <a href=""><h3>小米之家</h3></a>
+                <a href=""><h4>服务网点</h4></a>
+                <a href=""><h5>预约亲临到店服务</h5></a>
+            
+            </li>
+            <li>
+            	<a href="" ><h2>关于小米</h2></a>
+                <a href=""><h3>了解小米</h3></a>
+                <a href=""><h4>加入小米</h4></a>
+                <a href=""><h5>练习我们</h5></a>
+            
+            </li>
+            <li>
+            	<a href="" ><h2>关注我们</h2></a>
+                <a href=""><h3>新浪微博</h3></a>
+                <a href=""><h4>小米部落</h4></a>
+                <a href=""><h5>官方微信</h5></a>
+            
+            </li>
+         </ul>
+            
+         <div class="bottom">
+               <a href="" ><h2>400-100-5678</h2></a>
+               <a href="" ><h3>周一至周日8:00-18:00</h3></a>
+               <a href=""><h4>仅收市话</h4></a>
+               <a href="" ><h5>24小时在线客服</h5></a>
+         </div>
+            
+           
+        
+        
+     </div>    
+  
+  </div>
+  
+  <div class="eleven">
+  		<div class="start">
+  	  		<div class="zi">小米旗下网站：小米网/MIUI/米聊/多看书城/小米路由器/小米后院/小米天猫店/小米淘宝直营店/小米网盟/问题反馈/Select Region@mi.com京ICP证110507 京ICP备10046444号 京公网安备1101080212535号 京网文【2014】0059-0009     </div>
+     		<select>
+     			<option selected="selected">简体中文</option>
+        		<option>繁体中文</option>
+        
+     
+     		</select>
+    	</div>
+    	<div  class="end">
+     	<a href="" class="img1"></a>
+        <a href="" class="img2"></a>
+        <a href="" class="img3"></a>
+        </div>
+  </div>
+
+     
+  
+        	
+       
+   			
+   		
+   			
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{margin:0;padding:0;list-style:none;}
+	.clearfix:after{content:"";clear:both;display:block;}
+	.clearfix{zoom:1;}
+	.web{width:100%;min-width:1346px;height:100%;min-height: 636px;}
+	.left{width:228px;height:636px;background:url(../img/b1.png);border-right:12px solid #cb0a56;float:left;}
+	.left h2{color:#ed6d4e;text-align:center;font-weight: bold;font-size:27px;margin-top:50px;margin-bottom:10px;}
+	.left h3{color:#e84452;font-size:20px;text-align:center;}
+	.left div{color:#838383;font-size:10px;padding-left:30px;padding-top:50px;}
+	.left img{width:6px;height:6px;padding-left:68px;}
+	.left .content{position:relative;cursor:pointer;}
+
+	.left .content ul{position:absolute;left:240px;top:50px;width:210px;height:306px;background:url(../img/b1.png);display:none;}
+	.left .content  ul b{width:0;height:34px;position:absolute;left:0;top:0;background:red;}
+	.left .content ul li{width:210px;height:34px;position:relative;}
+	.left .content ul li:hover{background:#cb0a56;}
+	.left .content ul li a {font-size:14px;line-height:34px;display:block;color:#838383;text-decoration: none;padding-left:10px;}
+	.right{width:1106px;height:636px;float:left;}
+	.right li{width:368px;height:220px;float:left;}
+	.right li img{width:368px;height:220px;}
+</style>
+<script src="s.js"></script>
+<script>
+	window.onload=function(){
+		var oC=document.getElementById('content');
+		var oL=document.getElementById('list');
+		var oLi=oL.getElementsByTagName('li');
+		var oB=document.getElementsByTagName('b')
+		var timer=null
+		oC.onmouseover=function(){
+			clearTimeout(timer)
+			timer=setTimeout(function(){
+				oL.style.display="block"
+
+			},300)
+		}
+		oC.onmouseout=function(){
+			clearTimeout(timer);
+			timer=setTimeout(function(){
+				oL.style.display="none"
+			},300)
+		}
+		
+		
+
+		
+	}
+</script>
+
+<body>
+	<div class="web">
+		<div class="left clearfix">
+			<h2>Personal Works</h2>
+			<h3>个人作品</h3>
+			<div class="content" id="content">仿各类网站首页制作
+				<img src="../img/jia.png" alt="">
+				<ul id="list">
+					<li><a href="京东/index.html" target="_blank">（仿）京东首页</a><b></b></li>
+					<li><a href="小米/小米.html" target="_blank">（仿）小米首页</a><b></b></li>
+					<li><a href="oppo/oppo.html" target="_blank">（仿）OPPO首页</a><b></b></li>
+					<li><a href="京东手机版/jingdongphone.html" target="_blank">（仿）京东手机首页</a><b></b></li>
+					<li><a href="仿糯米网/index.html" target="_blank">（仿）百度糯米首页</a><b></b></li>
+					<li><a href="天猫/index.html" target="_blank">（仿）天猫首页</a><b></b></li>
+					<li><a href="仿写凡客首页/index.html" target="_blank">（仿）凡客首页</a><b></b></li>
+					<li><a href="仿淘宝/taobao.html" target="_blank">（仿）淘宝首页</a><b></b></li>
+					<li><a href="苏宁易购/index.html" target="_blank">（仿）苏宁易购首页</a><b></b></li>
+				</ul>
+			</div>
+			
+				
+			
+		</div>
+		<div class="right clearfix">
+			<ul>
+				<li><a href="京东/index.html" target="_blank"><img src="../img/l1.png" alt=""></a></li>
+				<li><a href="小米/小米.html" target="_blank"><img src="../img/l2.png" alt=""></a></li>
+				<li><a href="oppo/oppo.html" target="_blank"><img src="../img/l3.png" alt=""></a></li>
+				<li><a href="京东手机版/jingdongphone.html" target="_blank"><img src="../img/l4.png" alt=""></a></li>
+				<li><a href="仿糯米网/index.html" target="_blank"><img src="../img/l5.png" alt=""></a></li>
+				<li><a href="天猫/index.html" target="_blank"><img src="../img/l6.png" alt=""></a></li>
+				<li><a href="仿写凡客首页/index.html" target="_blank"><img src="../img/l7.png" alt=""></a></li>
+				<li><a href="仿淘宝/taobao.html" target="_blank"><img src="../img/l8.png" alt=""></a></li>
+				<li><a href="苏宁易购/index.html" target="_blank"><img src="../img/l9.png" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

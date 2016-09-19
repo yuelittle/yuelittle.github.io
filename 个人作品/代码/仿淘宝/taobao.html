@@ -1,0 +1,3073 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" href="./css/css.css">
+	<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="./js/js.js"></script>
+	<link rel="icon" href="./images/tao.ico"> 
+	<title>淘宝网 - 淘!我喜欢</title>
+	<script type="text/javascript">
+	$(function () {
+		// $('#homework').delay(2000).slideDown(2000).delay(2000).slideUp(2000);
+		$('.con-ul li').mouseover(function () {
+			var n = $(this).index();
+			$('.con-div').eq(n).show().siblings('.con-div').hide();
+		});
+		$(window).scroll(function () {
+			var top = $('body').scrollTop();
+			if(top >= 265){
+				$('.top-fix').addClass('f');
+			}else {
+				$(".top-fix").removeClass('f');
+			}
+		})
+		var index=0;
+		var timer;
+		timer = setInterval(function(){
+			index++;
+			if(index == 5){
+				index =0;
+			}
+			$('.app-bg ul li').eq(index).addClass('on').siblings('.app-bg ul li').removeClass('on');
+			$('.apps-ft div').eq(index).show().siblings('.apps-ft div').hide();
+			$('.app-bg ul li').eq(index).find('span').addClass('spanon').parent().siblings().find('span').removeClass('spanon');
+		},2000)
+
+			$(window).scroll(function () {
+				var t = $(document).scrollTop();
+				if(t > 400 && t < 700){
+					$('.shoe').fadeIn(500);
+				}else{
+					$('.shoe').fadeOut(500);
+				}
+				if(t > 900 && t < 1100){
+					$('.huwai').fadeIn(500);
+				}else{
+					$('.huwai').fadeOut(500);
+				}
+				if(t > 1200 && t < 1500){
+					$('.chaoliu').fadeIn(500);
+				}else{
+					$('.chaoliu').fadeOut(500);
+				}
+				if(t > 1500 && t < 1800){
+					$('.huichi').fadeIn(500);
+				}else{
+					$('.huichi').fadeOut(500);
+				}
+				if(t > 1500 && t < 1800){
+					$('.yunfu').fadeIn(500);
+				}else{
+					$('.yunfu').fadeOut(500);
+				}
+				if(t > 2100 && t < 2400){
+					$('.chihuo').fadeIn(500);
+				}else{
+					$('.chihuo').fadeOut(500);
+				}
+				if(t > 2400 && t < 2800){
+					$('.qiche').fadeIn(500);
+				}else{
+					$('.qiche').fadeOut(500);
+				}
+
+			})
+			$('.feature-bd a').hover(function () {
+				var index = $(this).index();
+				$(this).addClass('online').siblings().removeClass('online');
+				$('.feature-bd a').eq(index).find('em').show().parent().parent().siblings('.feature-bd a').find('em').hide()
+				$('.feature-bd a').eq(index).find('b').show().parent().parent().siblings('.feature-bd a').find('b').hide()
+			},function () {
+
+			})
+			$('.service .service-ul li').mouseover(function () {
+				var index = $(this).index();
+				$('.service .service-ul li').eq(index).css('border','1px solid red').siblings().css('border','1px solid #eee');
+				$('.service-content').eq(index).show().siblings('.service-content').hide();
+			})
+			$('.s-content-ul span').click(function () {
+				$('.service-content').hide();
+			})
+			$('.con-ul span').click(function () {
+				$('.service-content').hide();
+			})
+	})
+	</script>
+</head>
+<body>
+<div class="top-fix">
+		<div class="fix-box">
+			<a class="logo" href=""></a>
+			<div class="input">
+				<i class="iconmoon fix-icon">&#xe634;</i>
+				<span>宝贝</span>
+				<input type="text" placeholder="蟹肥膏黄鲜过中秋">
+				<button>搜索</button>
+			</div>
+		</div>
+</div>
+	<div class="homework" id="homework" style="display:none;">
+		<img width="1190px;" height="70px" src="./images/ad2.jpg">
+	</div>
+	<!-- 导航条开始 -->
+	<div class="top-bar">
+		<div class="top-center">
+		<a href="" class="public login">亲，请登录</a>
+		<a href="" class="public register">免费注册</a>
+		<a href="" class="public tel">手机逛淘宝</a>
+		<img src="./images/top-bar1.gif" alt="bar">
+		<div class="top-right">
+		<ul class="topbar" id="topbar">
+			<li><a href="">我的淘宝</a><i class="iconfont">&#xe611;</i>
+			<div class="mytaobao" id="mytaobao">
+				<ul>
+					<li><a href="">已买到的宝贝</a></li>
+					<li><a href="">我的足迹</a></li>
+					<li><a href="">爱逛街</a></li>
+					<li><a href="">淘宝达人</a></li>
+					<li><a href="">新欢</a></li>
+				</ul>
+			</div>
+			</li>
+			<li><i class="icon">&#xe61b;</i><a href="" style="width:40px;">购物车</a><i class="iconfont" style="color:#ff4400">&#xe611;</i>
+			</li>
+			<li><i class="iconmoon" style="height:20px">&#xf0061;</i><a href="" style="width:40px;">收藏夹</a><i class="iconfont">&#xe611;</i><div class="shoucang" id="shoucang"><ul><li><a href="">收藏的宝贝</a></li><li><a href="">收藏的店铺</a></li></ul></div>
+			</li>
+			<li><a href="">商品分类</a><span></span></li>
+			<li><a href="">卖家中心</a><i class="iconfont">&#xe611;</i>
+			<div class="maijia" id="maijia">
+				<ul>
+					<li><a href="">免费开店</a></li>
+					<li><a href="">已出售的宝贝</a></li>
+					<li><a href="">已卖出的宝贝</a></li>
+					<li><a href="">卖家服务市场</a></li>
+					<li><a href="">卖家培训中心</a></li>
+				</ul>				
+			</div>
+			</li>
+			<li><a href="">联系客服</a><i class="iconfont">&#xe611;</i>
+			<div class="kefu" id="kefu">
+				<ul>
+					<li><a href="">消费者客服</a></li>
+					<li><a href="">卖家客服</a></li>
+				</ul>
+			</div>
+			</li>
+			<li style="width:86px;position:relative"><i class="iconmoon" style="font-size:12px;color:#ff4400;height:20px">&#xe6c0;</i><a href="">网站导航</a><i class="iconfont" style="color:#ff4400">&#xe611;</i>
+			<div class="map" id="map">
+				<div class="map-first">
+					<div class="first-title">
+						<h4></h4>
+					</div>
+				<div class="first-ul">
+				<ul>
+					<li><a href="">女装</a></li>
+					<li><a href="">男装</a></li>
+					<li><a href="">鞋靴</a></li>
+					<li><a href="">箱包</a></li>
+					<li><a href="">婴童</a></li>
+					<li><a href="">美妆</a></li>
+					<li><a href="">食品</a></li>
+					<li><a href="">珠宝</a></li>
+					<li><a href="">装修</a></li>
+					<li><a href="">建材</a></li>
+					<li><a href="">家居</a></li>
+					<li><a href="">百货</a></li>
+					<li><a href="">汽车</a></li>
+					<li><a href="">数码</a></li>
+					<li><a href="">家电</a></li>
+					<li><a href="">游戏</a></li>
+					<li><a href="">生活</a></li>
+					<li><a href="">学习</a></li>
+					<li><a href="">房产</a></li>
+					<li><a href="">结婚</a></li>
+					<li><a href="">运动</a></li>
+					<li><a href="">户外</a></li>
+					<li><a href="">娱乐</a></li>
+					<li><a href="">花鸟</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="map-first">
+			<div class="first-title second-title">
+				<h4></h4>
+			</div>
+			<div class="first-ul second-ul">
+				<ul>
+					<li><a href="">淘宝女人</a></li>
+					<li><a href="">淘宝男人</a></li>
+					<li><a href="">中老年</a></li>
+					<li><a href="">咸鱼</a></li>
+					<li><a href="">拍卖会</a></li>
+					<li><a href="">全球购</a></li>
+					<li><a href="">海外直邮</a></li>
+					<li><a href="">淘宝众筹</a></li>
+					<li><a href="">爱逛街</a></li>
+					<li><a href="">中国制造</a></li>
+					<li><a href="">淘女郎</a></li>
+					<li><a href="">企业购</a></li>
+					<li><a href="">天天特价</a></li>
+					<li><a href="">试用</a></li>
+					<li><a href="">清仓</a></li>
+					<li><a href="">全民抢拍</a></li>
+					<li><a href="">淘金币</a></li>
+					<li><a href="">强新</a></li>
+					<li><a href="">淘特莱斯</a></li>
+					<li><a href="">本地团</a></li>
+					<li><a href="">挑食</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="map-first" id="map-first">
+			<div class="first-title third-title">
+				<h4></h4>
+			</div>
+			<div class="first-ul third-ul">
+				<ul>
+					<li><a href="">天天中奖</a></li>
+					<li><a href="">新鲜土货</a></li>
+					<li><a href="">美丽裙装</a></li>
+					<li><a href="">美白修复</a></li>
+					<li><a href="">热卖单鞋</a></li>
+					<li><a href="">智能数码</a></li>
+					<li><a href="">海外精品</a></li>
+					<li><a href="">特价旅行</a></li>
+					<li><a href="">宝贝最爱</a></li>
+					<li><a href="">宅品精选</a></li>
+					<li><a href="">新房装修</a></li>
+					<li><a href="">宝贝计划</a></li>
+					<li><a href="">大码女装</a></li>
+					<li><a href="">我要泡妞</a></li>
+					<li><a href="">全球美食</a></li>
+					<li><a href="">急聘客服</a></li>
+					<li><a href="">阿里APP</a></li>
+					<li><a href="">在线洗衣</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="map-first map-fouth">
+			<div class="first-title fouth-title">
+				<h4></h4>
+			</div>
+			<div class="first-ul fouth-ul">
+				<ul>
+					<li><a href="">阿里旺旺</a></li>
+					<li><a href="">支付宝</a></li>
+					<li><a href="">来往</a></li>
+					<li><a href="">潮电街</a></li>
+					<li><a href="">买房租房</a></li>
+					<li><a href="">大众评审</a></li>
+					<li><a href="">天猫进口</a></li>
+					<li><a href="">限时限量</a></li>
+					<li><a href="">余额宝</a></li>
+					<li><a href="">大牌捡包</a></li>
+					<li><a href="">淘公仔</a></li>
+					<li><a href="">浏览器</a></li>
+					<li><a href="">司法拍卖</a></li>
+					<li><a href="">查寄快递</a></li>
+					<li><a href="">淘宝香港</a></li>
+					<li><a href="">淘宝台湾</a></li>
+					<li><a href="">淘宝全球</a></li>
+					<li><a href="">淘宝东南亚</a></li>
+					<li><a href="">闺蜜淘货</a></li>
+					<li><a href="">B格</a></li>
+					<li><a href="">淘宝视频</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+			</li>
+		</ul>
+		</div>
+		</div>
+	</div>
+	<!-- 导航条结束 -->
+
+	<!-- 搜索开始 -->
+	<div class="search">
+		<div class="search-logo">
+			<a href=""></a>
+		</div>
+		<div class="search-content">
+		<div class="search-tab" id="search-tab">
+			<ul>
+				<li class="select">宝贝</li>
+				<li>天猫</li>
+				<li>店铺</li>
+			</ul>
+		</div>
+		<div class="search-con" id="search-con">
+			<div class="mod" style="display:block">
+				<input type="text" class="mod-first"><button class="mod-button">搜索</button>
+				<a href="" style="color:#ff4400">logo设计</a>
+				<a href="">口红</a>
+				<a href="" style="color:#ff4400">时尚连衣裙</a>
+				<a href="">女士双肩包</a>
+				<a href="">男鞋</a>
+				<a href="" style="color:#ff4400">行车记录仪</a>
+				<a href="">夏日男款T</a>
+				<a href="">夹克男</a>
+				<a href="">牛仔裤男</a>
+				<a href="">沙发</a>
+				<a href="">拉杆箱</a>
+				<a href="">书包小学生</a>
+				<i class="iconmoon icon">&#xe634;</i>
+				<a href="" class="high">高级<br>搜索</a>
+			</div>
+			<div class="mod" style="display:none">
+				<input type="text" class="mod-first1"><button class="mod-button1">搜索</button>
+				<a href="" style="color:#C40000;padding:0 5px">连衣裙</a>
+				<a href="" style="padding:0 5px">运动鞋</a>
+				<a href="" style="color:#C40000">童装套装</a>
+				<a href="" style="padding:0 5px">bb霜</a>
+				<a href="" style="padding:0 5px">笔记本电脑</a>
+				<a href="" style="padding:0 5px">沙发</a>
+				<a href="" style="padding:0 5px">铁皮枫斗</a>
+				<a href="" style="color:#C40000">女包</a>
+				<a href="" style="padding:0 5px">男士手表</a>
+				<a href="" style="color:#C40000">文具</a>
+				<a href="" style="padding:0 5px">婚庆床品</a>
+				<a href="" style="padding:0 5px">冰箱</a>
+				<a href="" style="padding:0 5px">奶粉</a>
+				<a href="" class="high">高级<br>搜索</a>
+				<i class="iconmoon icon">&#xe634;</i>	
+			</div>
+			<div class="mod" style="display:none">
+				<form action="" class="form">
+				<input type="text" class="mod-first"><button class="mod-button">搜索</button>
+				</form>
+				<a href="" style="color:#ff4400">logo设计</a>
+				<a href="">口红</a>
+				<a href="" style="color:#ff4400">时尚连衣裙</a>
+				<a href="">女士双肩包</a>
+				<a href="">男鞋</a>
+				<a href="" style="color:#ff4400">行车记录仪</a>
+				<a href="">夏日男款T</a>
+				<a href="">夹克男</a>
+				<a href="">牛仔裤男</a>
+				<a href="">沙发</a>
+				<a href="">拉杆箱</a>
+				<a href="">书包小学生</a>
+				<a href="" class="high">高级<br>搜索</a>
+				<i class="iconmoon icon">&#xe634;</i>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 搜索结束 -->
+	<div class="body-content">
+		<div class="navbar">
+			<div class="navbar-top">
+				<p>淘宝特色服务</p>
+			</div>
+			<ul class="nav-ul-l">
+				<li><a href="">天猫</a></li>
+				<li><a href="" style="width:61px;">聚划算</a></li>
+				<li><a href="">超市</a></li>
+				<li><a href="">头条</a></li>
+			</ul>
+			<ul class="nav-ul-r">
+				<span></span>
+				<li><a href="">阿里旅行</a></li>
+				<li><a href="">淘抢购</a></li>
+				<li><a href="">司法拍卖</a></li>
+				<li><a href="">一淘</a></li>
+				<li><a href="">电器城</a></li>
+				<li><a href="">美妆闪购</a></li>
+				<li><a href="">阿里小智</a></li>
+				<li><a href="">特色中国</a></li>
+			</ul>
+		</div>
+		<div class="b-left">
+			<i class="iconmoon b-icon">&#xe64e;</i>
+			<p class="b-left-p">主题市场</p>	
+			<ul class="b-left-ul" id="b-left-ul">
+				<li><p><a href="">女装</a><a href="">男装</a><a href="">鞋靴</a><a href="">箱包</a><span>></span></p>
+				<div class="b-left-div">
+					<div class="left-div-c">
+						<div class="div-c-1">
+							<div class="line">
+							<i class="iconmoon" style="color:#f66294;font-size:18px;height:20px;">&#xe60f;</i>
+							<a href="" class="a">女装</a><a href="" class="a1">更多</a>
+							</div>
+							<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+							<a class="div-a" href="">韩版</a>
+							<a class="div-a" href="">连衣裙</a>
+							<a class="div-a" href="" style="color:#fe4000">T恤</a>
+							<a class="div-a" href="">裤子</a>
+							<a class="div-a" href="" style="color:#fe4000">套装</a>
+							<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+							<a class="div-a" href="">限量抢新</a>
+							<a class="div-a" href="">毛针织衫</a>
+							<a class="div-a" href="">薄开衫</a>
+							<a class="div-a" href="">风衣</a>
+							<a class="div-a" href="">卫衣</a>
+							<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+							<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+							<a class="div-a" href="">妈妈装</a>
+							<a class="div-a" href="" style="color:#fe4000">大码</a>
+							<a class="div-a" href="">薄羽绒</a>
+							<a class="div-a" href="">短外套</a>
+							<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+							<a class="div-a" href="">90后</a>
+					</div>
+					<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">男装</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋上新</a>
+					<a class="div-a" href="">设计款</a>
+					<a class="div-a" href="">品牌清仓</a>
+					<a class="div-a" href="">T恤</a>
+					<a class="div-a" href="" style="color:#fe4000">长袖T</a>
+					<a class="div-a" href="">POLO</a>
+					<a class="div-a" href="" style="color:#fe4000">开衫</a>
+					<a class="div-a" href="" style="color:#fe4000">卫衣</a>
+					<a class="div-a" href="">衬衫</a>
+					<a class="div-a" href="">毛衣</a>
+					<a class="div-a" href="">秋外套</a>
+					<a class="div-a" href="">夹克</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="" style="color:#fe4000">皮衣</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="">打底衫</a>
+					<a class="div-a" href="" style="color:#fe4000">裤子</a>
+					<a class="div-a" href="">九分裤</a>
+					<a class="div-a" href="">长裤</a>
+					<a class="div-a" href="" style="color:#fe4000">休闲裤</a>
+					<a class="div-a" href="">牛仔裤</a>
+					<a class="div-a" href="">小脚裤</a>
+				</div>
+				<div class="div-c-1">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe648;</i>
+					<a href="" class="a">男鞋女鞋</a><a href="" class="a1">更多</a>
+					</div>                   
+					<a class="div-a" href="" style="color:#fe4000">女鞋</a>
+					<a class="div-a" href="">豆豆鞋</a>
+					<a class="div-a" href="">单鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">平底</a>
+					<a class="div-a" href="">抢新</a>
+					<a class="div-a" href="" style="color:#fe4000">坡跟</a>
+					<a class="div-a" href="" style="color:#fe4000">中跟</a>
+					<a class="div-a" href="">鱼嘴</a>
+					<a class="div-a" href="">帆布鞋</a>
+					<a class="div-a" href="">真皮</a>
+					<a class="div-a" href="" style="width:50px">妈妈鞋</a>
+					<a class="div-a" href="">男鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">休闲</a>
+					<a class="div-a" href="" style="color:#fe4000">帆布</a>
+					<a class="div-a" href="">潮流</a>
+					<a class="div-a" href="" style="color:#fe4000">皮鞋</a>
+					<a class="div-a" href="">商务</a>
+					<a class="div-a" href="">豆豆鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">品牌折扣</a>
+					<a class="div-a" href="">增高</a>
+					<a class="div-a" href="">休闲运动 </a>
+				</div>
+				<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#x344f;</i>
+					<a href="" class="a">箱包</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="div-c-1">
+				<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">内衣</a><a href="" class="a1">更多</a>
+				</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">配件</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="c-pic">
+				<div class="div-c-r1">
+					<img src="./images/xie.jpg" alt="xie">
+					<p style="width:100px;text-align:center">[质+]百搭小白鞋</p>
+				</div>
+				<div class="div-c-r2">
+					<img src="./images/xue.jpg" alt="xie">
+					<p style="width:100px;text-align:center">四大流行短靴</p>
+				</div>
+				<div class="div-c-r3">
+					<img src="./images/nei.jpg" alt="xie">
+					<p style="width:100px;text-align:center">早秋性感内衣</p>
+				</div>
+				</div>
+			</div>
+				</div>
+				</li>
+				<li><p><a href="">婴童</a><a href="">美妆</a><a href="">食品</a><a href="">珠宝</a><span>></span></p>
+				<div class="b-left-div">
+					<div class="left-div-c">
+						<div class="div-c-1">
+							<div class="line">
+							<i class="iconmoon" style="color:#f66294;font-size:18px;height:20px;">&#xe60f;</i>
+							<a href="" class="a">女装</a><a href="" class="a1">更多</a>
+							</div>
+							<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+							<a class="div-a" href="">韩版</a>
+							<a class="div-a" href="">连衣裙</a>
+							<a class="div-a" href="" style="color:#fe4000">T恤</a>
+							<a class="div-a" href="">裤子</a>
+							<a class="div-a" href="" style="color:#fe4000">套装</a>
+							<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+							<a class="div-a" href="">限量抢新</a>
+							<a class="div-a" href="">毛针织衫</a>
+							<a class="div-a" href="">薄开衫</a>
+							<a class="div-a" href="">风衣</a>
+							<a class="div-a" href="">卫衣</a>
+							<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+							<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+							<a class="div-a" href="">妈妈装</a>
+							<a class="div-a" href="" style="color:#fe4000">大码</a>
+							<a class="div-a" href="">薄羽绒</a>
+							<a class="div-a" href="">短外套</a>
+							<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+							<a class="div-a" href="">90后</a>
+					</div>
+					<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">男装</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋上新</a>
+					<a class="div-a" href="">设计款</a>
+					<a class="div-a" href="">品牌清仓</a>
+					<a class="div-a" href="">T恤</a>
+					<a class="div-a" href="" style="color:#fe4000">长袖T</a>
+					<a class="div-a" href="">POLO</a>
+					<a class="div-a" href="" style="color:#fe4000">开衫</a>
+					<a class="div-a" href="" style="color:#fe4000">卫衣</a>
+					<a class="div-a" href="">衬衫</a>
+					<a class="div-a" href="">毛衣</a>
+					<a class="div-a" href="">秋外套</a>
+					<a class="div-a" href="">夹克</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="" style="color:#fe4000">皮衣</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="">打底衫</a>
+					<a class="div-a" href="" style="color:#fe4000">裤子</a>
+					<a class="div-a" href="">九分裤</a>
+					<a class="div-a" href="">长裤</a>
+					<a class="div-a" href="" style="color:#fe4000">休闲裤</a>
+					<a class="div-a" href="">牛仔裤</a>
+					<a class="div-a" href="">小脚裤</a>
+				</div>
+				<div class="div-c-1">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe648;</i>
+					<a href="" class="a">男鞋女鞋</a><a href="" class="a1">更多</a>
+					</div>                   
+					<a class="div-a" href="" style="color:#fe4000">女鞋</a>
+					<a class="div-a" href="">豆豆鞋</a>
+					<a class="div-a" href="">单鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">平底</a>
+					<a class="div-a" href="">抢新</a>
+					<a class="div-a" href="" style="color:#fe4000">坡跟</a>
+					<a class="div-a" href="" style="color:#fe4000">中跟</a>
+					<a class="div-a" href="">鱼嘴</a>
+					<a class="div-a" href="">帆布鞋</a>
+					<a class="div-a" href="">真皮</a>
+					<a class="div-a" href="" style="width:50px">妈妈鞋</a>
+					<a class="div-a" href="">男鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">休闲</a>
+					<a class="div-a" href="" style="color:#fe4000">帆布</a>
+					<a class="div-a" href="">潮流</a>
+					<a class="div-a" href="" style="color:#fe4000">皮鞋</a>
+					<a class="div-a" href="">商务</a>
+					<a class="div-a" href="">豆豆鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">品牌折扣</a>
+					<a class="div-a" href="">增高</a>
+					<a class="div-a" href="">休闲运动 </a>
+				</div>
+				<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#x344f;</i>
+					<a href="" class="a">箱包</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="div-c-1">
+				<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">内衣</a><a href="" class="a1">更多</a>
+				</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">配件</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="c-pic">
+				<div class="div-c-r1">
+					<img src="./images/shipin1.webp" alt="xie">
+					<p style="width:100px;text-align:center">饰品优质店铺联盟</p>
+				</div>
+				<div class="div-c-r2">
+					<img src="./images/xiami.webp" alt="xie">
+					<p style="width:100px;text-align:center">吃,就该那么挑</p>
+				</div>
+				<div class="div-c-r3">
+					<img src="./images/naifen111.webp" alt="xie">
+					<p style="width:100px;text-align:center">健康嘉宝全系列</p>
+				</div>
+				</div>
+			</div>
+				</div>
+				</li>
+				<li><p><a href="">装修</a><a href="">建材</a><a href="">家居</a><a href="">百货</a><span>></span></p>
+				<div class="b-left-div">
+					<div class="left-div-c">
+						<div class="div-c-1">
+							<div class="line">
+							<i class="iconmoon" style="color:#f66294;font-size:18px;height:20px;">&#xe60f;</i>
+							<a href="" class="a">女装</a><a href="" class="a1">更多</a>
+							</div>
+							<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+							<a class="div-a" href="">韩版</a>
+							<a class="div-a" href="">连衣裙</a>
+							<a class="div-a" href="" style="color:#fe4000">T恤</a>
+							<a class="div-a" href="">裤子</a>
+							<a class="div-a" href="" style="color:#fe4000">套装</a>
+							<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+							<a class="div-a" href="">限量抢新</a>
+							<a class="div-a" href="">毛针织衫</a>
+							<a class="div-a" href="">薄开衫</a>
+							<a class="div-a" href="">风衣</a>
+							<a class="div-a" href="">卫衣</a>
+							<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+							<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+							<a class="div-a" href="">妈妈装</a>
+							<a class="div-a" href="" style="color:#fe4000">大码</a>
+							<a class="div-a" href="">薄羽绒</a>
+							<a class="div-a" href="">短外套</a>
+							<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+							<a class="div-a" href="">90后</a>
+					</div>
+					<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">男装</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋上新</a>
+					<a class="div-a" href="">设计款</a>
+					<a class="div-a" href="">品牌清仓</a>
+					<a class="div-a" href="">T恤</a>
+					<a class="div-a" href="" style="color:#fe4000">长袖T</a>
+					<a class="div-a" href="">POLO</a>
+					<a class="div-a" href="" style="color:#fe4000">开衫</a>
+					<a class="div-a" href="" style="color:#fe4000">卫衣</a>
+					<a class="div-a" href="">衬衫</a>
+					<a class="div-a" href="">毛衣</a>
+					<a class="div-a" href="">秋外套</a>
+					<a class="div-a" href="">夹克</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="" style="color:#fe4000">皮衣</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="">打底衫</a>
+					<a class="div-a" href="" style="color:#fe4000">裤子</a>
+					<a class="div-a" href="">九分裤</a>
+					<a class="div-a" href="">长裤</a>
+					<a class="div-a" href="" style="color:#fe4000">休闲裤</a>
+					<a class="div-a" href="">牛仔裤</a>
+					<a class="div-a" href="">小脚裤</a>
+				</div>
+				<div class="div-c-1">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe648;</i>
+					<a href="" class="a">男鞋女鞋</a><a href="" class="a1">更多</a>
+					</div>                   
+					<a class="div-a" href="" style="color:#fe4000">女鞋</a>
+					<a class="div-a" href="">豆豆鞋</a>
+					<a class="div-a" href="">单鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">平底</a>
+					<a class="div-a" href="">抢新</a>
+					<a class="div-a" href="" style="color:#fe4000">坡跟</a>
+					<a class="div-a" href="" style="color:#fe4000">中跟</a>
+					<a class="div-a" href="">鱼嘴</a>
+					<a class="div-a" href="">帆布鞋</a>
+					<a class="div-a" href="">真皮</a>
+					<a class="div-a" href="" style="width:50px">妈妈鞋</a>
+					<a class="div-a" href="">男鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">休闲</a>
+					<a class="div-a" href="" style="color:#fe4000">帆布</a>
+					<a class="div-a" href="">潮流</a>
+					<a class="div-a" href="" style="color:#fe4000">皮鞋</a>
+					<a class="div-a" href="">商务</a>
+					<a class="div-a" href="">豆豆鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">品牌折扣</a>
+					<a class="div-a" href="">增高</a>
+					<a class="div-a" href="">休闲运动 </a>
+				</div>
+				<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#x344f;</i>
+					<a href="" class="a">箱包</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="div-c-1">
+				<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">内衣</a><a href="" class="a1">更多</a>
+				</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">配件</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="c-pic">
+				<div class="div-c-r1">
+					<img src="./images/home1.webp" alt="xie">
+					<p style="width:100px;text-align:center">美美的家</p>
+				</div>
+				<div class="div-c-r2">
+					<img src="./images/chifan111.png" alt="xie">
+					<p style="width:100px;text-align:center">不好看不吃饭</p>
+				</div>
+				<div class="div-c-r3">
+					<img src="./images/zhuangxiu.webp" alt="xie">
+					<p style="width:100px;text-align:center">超爱装修风格</p>
+				</div>
+				</div>
+			</div>
+		</div>
+				</li>
+				<li><p><a href="">汽车</a><a href="">数码</a><a href="">数码</a><a href="">家电</a><span>></span></p>
+				<div class="b-left-div">
+					<div class="left-div-c">
+						<div class="div-c-1">
+							<div class="line">
+							<i class="iconmoon" style="color:#f66294;font-size:18px;height:20px;">&#xe60f;</i>
+							<a href="" class="a">女装</a><a href="" class="a1">更多</a>
+							</div>
+							<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+							<a class="div-a" href="">韩版</a>
+							<a class="div-a" href="">连衣裙</a>
+							<a class="div-a" href="" style="color:#fe4000">T恤</a>
+							<a class="div-a" href="">裤子</a>
+							<a class="div-a" href="" style="color:#fe4000">套装</a>
+							<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+							<a class="div-a" href="">限量抢新</a>
+							<a class="div-a" href="">毛针织衫</a>
+							<a class="div-a" href="">薄开衫</a>
+							<a class="div-a" href="">风衣</a>
+							<a class="div-a" href="">卫衣</a>
+							<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+							<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+							<a class="div-a" href="">妈妈装</a>
+							<a class="div-a" href="" style="color:#fe4000">大码</a>
+							<a class="div-a" href="">薄羽绒</a>
+							<a class="div-a" href="">短外套</a>
+							<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+							<a class="div-a" href="">90后</a>
+					</div>
+					<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">男装</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋上新</a>
+					<a class="div-a" href="">设计款</a>
+					<a class="div-a" href="">品牌清仓</a>
+					<a class="div-a" href="">T恤</a>
+					<a class="div-a" href="" style="color:#fe4000">长袖T</a>
+					<a class="div-a" href="">POLO</a>
+					<a class="div-a" href="" style="color:#fe4000">开衫</a>
+					<a class="div-a" href="" style="color:#fe4000">卫衣</a>
+					<a class="div-a" href="">衬衫</a>
+					<a class="div-a" href="">毛衣</a>
+					<a class="div-a" href="">秋外套</a>
+					<a class="div-a" href="">夹克</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="" style="color:#fe4000">皮衣</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="">打底衫</a>
+					<a class="div-a" href="" style="color:#fe4000">裤子</a>
+					<a class="div-a" href="">九分裤</a>
+					<a class="div-a" href="">长裤</a>
+					<a class="div-a" href="" style="color:#fe4000">休闲裤</a>
+					<a class="div-a" href="">牛仔裤</a>
+					<a class="div-a" href="">小脚裤</a>
+				</div>
+				<div class="div-c-1">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe648;</i>
+					<a href="" class="a">男鞋女鞋</a><a href="" class="a1">更多</a>
+					</div>                   
+					<a class="div-a" href="" style="color:#fe4000">女鞋</a>
+					<a class="div-a" href="">豆豆鞋</a>
+					<a class="div-a" href="">单鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">平底</a>
+					<a class="div-a" href="">抢新</a>
+					<a class="div-a" href="" style="color:#fe4000">坡跟</a>
+					<a class="div-a" href="" style="color:#fe4000">中跟</a>
+					<a class="div-a" href="">鱼嘴</a>
+					<a class="div-a" href="">帆布鞋</a>
+					<a class="div-a" href="">真皮</a>
+					<a class="div-a" href="" style="width:50px">妈妈鞋</a>
+					<a class="div-a" href="">男鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">休闲</a>
+					<a class="div-a" href="" style="color:#fe4000">帆布</a>
+					<a class="div-a" href="">潮流</a>
+					<a class="div-a" href="" style="color:#fe4000">皮鞋</a>
+					<a class="div-a" href="">商务</a>
+					<a class="div-a" href="">豆豆鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">品牌折扣</a>
+					<a class="div-a" href="">增高</a>
+					<a class="div-a" href="">休闲运动 </a>
+				</div>
+				<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#x344f;</i>
+					<a href="" class="a">箱包</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="div-c-1">
+				<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">内衣</a><a href="" class="a1">更多</a>
+				</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">配件</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="c-pic">
+				<div class="div-c-r1">
+					<img src="./images/banjia.webp" alt="xie">
+					<p style="width:100px;text-align:center">哇！12000个半价</p>
+				</div>
+				<div class="div-c-r2">
+					<img src="./images/nvshen.webp" alt="xie">
+					<p style="width:100px;text-align:center">电竞女神带你飞</p>
+				</div>
+				<div class="div-c-r3">
+					<img src="./images/libao.webp" alt="xie">
+					<p style="width:100px;text-align:center">免费礼包随意领</p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</li>
+			<li><p><a href="">生活</a><a href="">学习</a><a href="">房产</a><a href="">结婚</a><span>></span></p>
+			<div class="b-left-div">
+					<div class="left-div-c">
+						<div class="div-c-1">
+							<div class="line">
+							<i class="iconmoon" style="color:#f66294;font-size:18px;height:20px;">&#xe60f;</i>
+							<a href="" class="a">女装</a><a href="" class="a1">更多</a>
+							</div>
+							<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+							<a class="div-a" href="">韩版</a>
+							<a class="div-a" href="">连衣裙</a>
+							<a class="div-a" href="" style="color:#fe4000">T恤</a>
+							<a class="div-a" href="">裤子</a>
+							<a class="div-a" href="" style="color:#fe4000">套装</a>
+							<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+							<a class="div-a" href="">限量抢新</a>
+							<a class="div-a" href="">毛针织衫</a>
+							<a class="div-a" href="">薄开衫</a>
+							<a class="div-a" href="">风衣</a>
+							<a class="div-a" href="">卫衣</a>
+							<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+							<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+							<a class="div-a" href="">妈妈装</a>
+							<a class="div-a" href="" style="color:#fe4000">大码</a>
+							<a class="div-a" href="">薄羽绒</a>
+							<a class="div-a" href="">短外套</a>
+							<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+							<a class="div-a" href="">90后</a>
+					</div>
+					<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">男装</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋上新</a>
+					<a class="div-a" href="">设计款</a>
+					<a class="div-a" href="">品牌清仓</a>
+					<a class="div-a" href="">T恤</a>
+					<a class="div-a" href="" style="color:#fe4000">长袖T</a>
+					<a class="div-a" href="">POLO</a>
+					<a class="div-a" href="" style="color:#fe4000">开衫</a>
+					<a class="div-a" href="" style="color:#fe4000">卫衣</a>
+					<a class="div-a" href="">衬衫</a>
+					<a class="div-a" href="">毛衣</a>
+					<a class="div-a" href="">秋外套</a>
+					<a class="div-a" href="">夹克</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="" style="color:#fe4000">皮衣</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="">打底衫</a>
+					<a class="div-a" href="" style="color:#fe4000">裤子</a>
+					<a class="div-a" href="">九分裤</a>
+					<a class="div-a" href="">长裤</a>
+					<a class="div-a" href="" style="color:#fe4000">休闲裤</a>
+					<a class="div-a" href="">牛仔裤</a>
+					<a class="div-a" href="">小脚裤</a>
+				</div>
+				<div class="div-c-1">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe648;</i>
+					<a href="" class="a">男鞋女鞋</a><a href="" class="a1">更多</a>
+					</div>                   
+					<a class="div-a" href="" style="color:#fe4000">女鞋</a>
+					<a class="div-a" href="">豆豆鞋</a>
+					<a class="div-a" href="">单鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">平底</a>
+					<a class="div-a" href="">抢新</a>
+					<a class="div-a" href="" style="color:#fe4000">坡跟</a>
+					<a class="div-a" href="" style="color:#fe4000">中跟</a>
+					<a class="div-a" href="">鱼嘴</a>
+					<a class="div-a" href="">帆布鞋</a>
+					<a class="div-a" href="">真皮</a>
+					<a class="div-a" href="" style="width:50px">妈妈鞋</a>
+					<a class="div-a" href="">男鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">休闲</a>
+					<a class="div-a" href="" style="color:#fe4000">帆布</a>
+					<a class="div-a" href="">潮流</a>
+					<a class="div-a" href="" style="color:#fe4000">皮鞋</a>
+					<a class="div-a" href="">商务</a>
+					<a class="div-a" href="">豆豆鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">品牌折扣</a>
+					<a class="div-a" href="">增高</a>
+					<a class="div-a" href="">休闲运动 </a>
+				</div>
+				<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#x344f;</i>
+					<a href="" class="a">箱包</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="div-c-1">
+				<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">内衣</a><a href="" class="a1">更多</a>
+				</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">配件</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="c-pic">
+				<div class="div-c-r1">
+					<img src="./images/dingchang.webp" alt="xie">
+					<p style="width:100px;text-align:center">婚礼场地不用等</p>
+				</div>
+				
+				<div class="div-c-r2">
+					<img src="./images/gongkai.webp" alt="xie">
+					<p style="width:100px;text-align:center">大咖云集公开课</p>
+				</div>
+				<div class="div-c-r3">
+					<img src="./images/xiyi.webp" alt="xie">
+					<p style="width:100px;text-align:center">中央工厂 专业洗衣</p>
+				</div>
+				</div>
+			</div>
+		</div>
+			</li>
+				<li><p><a href="">运动</a><a href="">户外</a><a href="">娱乐</a><a href="">花鸟</a><span>></span></p>
+				<div class="b-left-div">
+					<div class="left-div-c">
+						<div class="div-c-1">
+							<div class="line">
+							<i class="iconmoon" style="color:#f66294;font-size:18px;height:20px;">&#xe60f;</i>
+							<a href="" class="a">女装</a><a href="" class="a1">更多</a>
+							</div>
+							<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+							<a class="div-a" href="">韩版</a>
+							<a class="div-a" href="">连衣裙</a>
+							<a class="div-a" href="" style="color:#fe4000">T恤</a>
+							<a class="div-a" href="">裤子</a>
+							<a class="div-a" href="" style="color:#fe4000">套装</a>
+							<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+							<a class="div-a" href="">限量抢新</a>
+							<a class="div-a" href="">毛针织衫</a>
+							<a class="div-a" href="">薄开衫</a>
+							<a class="div-a" href="">风衣</a>
+							<a class="div-a" href="">卫衣</a>
+							<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+							<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+							<a class="div-a" href="">妈妈装</a>
+							<a class="div-a" href="" style="color:#fe4000">大码</a>
+							<a class="div-a" href="">薄羽绒</a>
+							<a class="div-a" href="">短外套</a>
+							<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+							<a class="div-a" href="">90后</a>
+					</div>
+					<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">男装</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋上新</a>
+					<a class="div-a" href="">设计款</a>
+					<a class="div-a" href="">品牌清仓</a>
+					<a class="div-a" href="">T恤</a>
+					<a class="div-a" href="" style="color:#fe4000">长袖T</a>
+					<a class="div-a" href="">POLO</a>
+					<a class="div-a" href="" style="color:#fe4000">开衫</a>
+					<a class="div-a" href="" style="color:#fe4000">卫衣</a>
+					<a class="div-a" href="">衬衫</a>
+					<a class="div-a" href="">毛衣</a>
+					<a class="div-a" href="">秋外套</a>
+					<a class="div-a" href="">夹克</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="" style="color:#fe4000">皮衣</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="">打底衫</a>
+					<a class="div-a" href="" style="color:#fe4000">裤子</a>
+					<a class="div-a" href="">九分裤</a>
+					<a class="div-a" href="">长裤</a>
+					<a class="div-a" href="" style="color:#fe4000">休闲裤</a>
+					<a class="div-a" href="">牛仔裤</a>
+					<a class="div-a" href="">小脚裤</a>
+				</div>
+				<div class="div-c-1">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe648;</i>
+					<a href="" class="a">男鞋女鞋</a><a href="" class="a1">更多</a>
+					</div>                   
+					<a class="div-a" href="" style="color:#fe4000">女鞋</a>
+					<a class="div-a" href="">豆豆鞋</a>
+					<a class="div-a" href="">单鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">平底</a>
+					<a class="div-a" href="">抢新</a>
+					<a class="div-a" href="" style="color:#fe4000">坡跟</a>
+					<a class="div-a" href="" style="color:#fe4000">中跟</a>
+					<a class="div-a" href="">鱼嘴</a>
+					<a class="div-a" href="">帆布鞋</a>
+					<a class="div-a" href="">真皮</a>
+					<a class="div-a" href="" style="width:50px">妈妈鞋</a>
+					<a class="div-a" href="">男鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">休闲</a>
+					<a class="div-a" href="" style="color:#fe4000">帆布</a>
+					<a class="div-a" href="">潮流</a>
+					<a class="div-a" href="" style="color:#fe4000">皮鞋</a>
+					<a class="div-a" href="">商务</a>
+					<a class="div-a" href="">豆豆鞋</a>
+					<a class="div-a" href="" style="color:#fe4000">品牌折扣</a>
+					<a class="div-a" href="">增高</a>
+					<a class="div-a" href="">休闲运动 </a>
+				</div>
+				<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#x344f;</i>
+					<a href="" class="a">箱包</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="div-c-1">
+				<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">内衣</a><a href="" class="a1">更多</a>
+				</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="div-c-1 c2">
+					<div class="line">
+					<i class="iconmoon" style="color:#f66294;font-size:18px">&#xe603;</i>
+					<a href="" class="a">配件</a><a href="" class="a1">更多</a>
+					</div>
+					<a class="div-a" href="" style="color:#fe4000">秋新品</a>
+					<a class="div-a" href="">韩版</a>
+					<a class="div-a" href="">连衣裙</a>
+					<a class="div-a" href="" style="color:#fe4000">T恤</a>
+					<a class="div-a" href="">裤子</a>
+					<a class="div-a" href="" style="color:#fe4000">套装</a>
+					<a class="div-a" href="" style="color:#fe4000">半身裙</a>
+					<a class="div-a" href="">限量抢新</a>
+					<a class="div-a" href="">毛针织衫</a>
+					<a class="div-a" href="">薄开衫</a>
+					<a class="div-a" href="">风衣</a>
+					<a class="div-a" href="">卫衣</a>
+					<a class="div-a" href="" style="color:#fe4000">呢外套</a>
+					<a class="div-a" href="" style="color:#fe4000">牛仔裤</a>
+					<a class="div-a" href="">妈妈装</a>
+					<a class="div-a" href="" style="color:#fe4000">大码</a>
+					<a class="div-a" href="">薄羽绒</a>
+					<a class="div-a" href="">短外套</a>
+					<a class="div-a" href="" style="color:#fe4000">衬衫</a>
+					<a class="div-a" href="">90后</a>
+				</div>
+				<div class="c-pic">
+				<div class="div-c-r1">
+					<img src="./images/maomao.webp" alt="xie">
+					<p style="width:100px;text-align:center">[质+]百搭小白鞋</p>
+				</div>
+				<div class="div-c-r2">
+					<img src="./images/huang.webp" alt="xie">
+					<p style="width:100px;text-align:center">四大流行短靴</p>
+				</div>
+				<div class="div-c-r3">
+					<img src="./images/zuqiu.webp" alt="xie">
+					<p style="width:100px;text-align:center">早秋性感内衣</p>
+				</div>
+				</div>
+			</div>
+		</div>
+				</li>
+			</ul>
+			<i class="iconmoon b-icon">&#xe610;</i>
+			<p class="b-left-p">特色购物</p>
+			<ul class="b-left-ul-1">
+					<li>
+						<a href="">淘宝女人</a>
+						<a href="">淘宝男人</a>
+						<a href="">中老年</a>
+					</li>
+					<li>
+						<a href="">闲鱼</a>
+						<a href="">拍卖会</a>
+						<a href="">全球购</a>
+					</li>
+					<li>
+						<a href="">批发量贩</a><img style="width:9px;height:15px" src="./images/top-bg2.gif" alt="">
+						<a href="" style="width:50px">淘宝众筹</a>
+						<a href="" style="width:40px">爱逛街</a>
+					</li>
+					<li>
+						<a href="">中国质造</a>
+						<a href="">淘女郎</a>
+						<a href="">企业购</a>
+					</li>
+				</ul>
+			<i class="iconmoon b-icon">&#xe697;</i>
+			<p class="b-left-p">优惠促销</p>
+			<ul class="b-left-ul-1 ul-h">
+					<li>
+						<a href="">淘宝女人</a>
+						<a href="">淘宝男人</a>
+						<a href="">中老年</a>
+					</li>
+					<li>
+						<a href="">闲鱼</a>
+						<a href="">拍卖会</a>
+						<a href="">全球购</a>
+					</li>
+					<li>
+						<a href="">批发量贩</a>
+						<a href="">淘宝众筹</a>
+						<a href="">爱逛街</a>
+					</li>
+				</ul>
+				<ul class="b-left-ul-1 ul-m">
+					<li>
+						<a href="">阿里旺旺</a>
+						<a href="">支付宝</a>
+						<a href="">来往</a>
+					</li>	
+		</div>
+		<div class="b-middle">
+			<div class="b-middle-top" id="b-middle-top">
+				<div class="b-middle-img" id="lists" style="left:-520px;">
+					<img src="./images/qiu5.jpg" alt="qiu5">
+					<img src="./images/qiu1.jpg" alt="qiu1">
+					<img src="./images/qiu2.jpg" alt="qiu2">
+					<img src="./images/qiu3.jpg" alt="qiu3">
+					<img src="./images/qiu4.jpg" alt="qiu4">
+					<img src="./images/qiu5.jpg" alt="qiu5">
+					<img src="./images/qiu1.jpg" alt="qiu1">
+				</div>
+				<div class="buttons" id="buttons">
+					<span class="on" indexbu='1'></span>
+					<span indexbu='2'></span>
+					<span indexbu='3'></span>
+					<span indexbu='4'></span>
+					<span indexbu='5'></span>
+				</div>
+				<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+    			<a href="javascript:;" id="next" class="arrow">&gt;</a>
+			</div>
+			<div class="b-middle-left">
+				<img src="./images/qingcang.png" alt="qingcang">
+			</div>
+			<div class="b-middle-bottom" id="middle-bottom">
+				<div class="b-m-b-img" id="bottom-img" style="left:-520px">
+					<div class="b-bottom-img">
+						<img src="./images/bb.jpg" alt="bb">
+						<img src="./images/bb1.jpg" alt="bb1">
+					</div>
+					<div class="b-bottom-img">
+						<img src="./images/meizhuang.png" alt="mei">
+						<img src="./images/zhuang1.png" alt="zhuang1">
+						<img src="./images/zhuang2.png" alt="zhuang2">
+						<img src="./images/tel.jpg" alt="tel">
+					</div>
+					<div class="b-bottom-img">
+						<img src="./images/tel1.png" alt="tel1">
+						<img src="./images/biao.png" alt="b">
+						<img src="./images/xie.png" alt="xie">
+						<img src="./images/chazuo.png" alt="">
+					</div>
+					<div class="b-bottom-img">
+						<img src="./images/bb.jpg" alt="bb">
+						<img src="./images/bb1.jpg" alt="bb1">
+					</div>
+					<div class="b-bottom-img">
+						<img src="./images/meizhuang.png" alt="mei">
+						<img src="./images/zhuang1.png" alt="zhuang1">
+						<img src="./images/zhuang2.png" alt="zhuang2">
+						<img src="./images/tel.jpg" alt="tel">
+					</div>
+				</div>
+				<div class="b-button" id="b-button">
+					<span class="online" indexs='1'></span>
+					<span indexs='2'></span>
+					<span indexs='3'></span>
+				</div>
+				<a href="javascript:;" id="b-prev" class="b-arrow">&lt;</a>
+    			<a href="javascript:;" id="b-next" class="b-arrow">&gt;</a>
+			</div>
+			<div class="b-middle-right">
+				<img src="./images/yu.jpg" alt="yu">
+			</div>
+		</div>
+		<div class="content-left">
+			<div class="left-tab">
+				<ul class="tab-ul" id="tab-ul">
+					<li class="select"><a href="">公告</a></li>
+					<li><a href="">规则</a></li>
+					<li><a href="">论坛</a></li>
+					<li><a href="">安全</a></li>
+					<li><a href="">公益</a></li>
+				</ul>
+				<div class="left-tab-bottom" id="left-tab-bottom">
+					<div class="mod" style="display:block">
+						<ul>
+							<li><a href="" style="color:#ff4400;margin-top:7px;">[热门] 手机淘宝开放内容 </a></li>
+							<li><a href="" style="color:#ff4400;margin-top:7px;">创作者可享20亿佣金</a></li>
+							<li><a href="" style="color:#3c3c3c">阿里体育全球化开局</a></li>
+							<li><a href="" style="color:#3c3c3c">天猫同步首发iPhone6s</a></li>
+						</ul>
+					</div>
+					<div class="mod" style="display:none">
+
+						<ul>
+							<li><a href="" style="color:#ff4400;margin-top:7px;">邮费究竟算谁的？</a></li>
+							<li><a href="" style="color:#ff4400;margin-top:7px;">争议处理新规变更</a></li>
+							<li><a href="" style="color:#3c3c3c">淘宝新规发布汇总(8月)</a></li>
+							<li><a href="" style="color:#3c3c3c">炒信规则调整意见反馈</a></li>
+						</ul>
+					</div>
+					<div class="mod" style="display:none">
+						<ul>
+							<li><a href="" style="color:#ff4400;margin-top:7px;">阿里建商家全链路服务</a></li>
+							<li><a href="" style="color:#ff4400;margin-top:7px;">体系个性化的消费时代来临</a></li>
+							<li><a href="" style="color:#3c3c3c">跨境贸易是中小企业机遇</a></li>
+							<li><a href="" style="color:#3c3c3c">美妆行业虚假信息管控</a></li>
+						</ul>
+					</div>
+					<div class="mod" style="display:none">
+						<ul>
+							<li><a href="" style="color:#ff4400;margin-top:7px;">接次文件，毁了一家店</a></li>
+							<li><a href="" style="color:#ff4400;margin-top:7px;">账号安全神器阿里钱盾</a></li>
+							<li><a href="" style="color:#3c3c3c">新版阿里110上线了</a></li>
+							<li><a href="" style="color:#3c3c3c">卖家学违禁避免被处罚</a></li>
+						</ul>
+					</div>
+					<div class="mod" style="display:none">
+						<ul>
+							<img class="img-1" style="width:50px;height:50px" src="./images/gongyi.webp" alt="gongyi">
+							<img class="img-2" style="width:50px;height:50px" src="./images/baobei.webp" alt="baobei">
+							<li class="li-1"><a href="" style="color:#ff4400">为了公益high起来</a></li>
+							<li class="li-2"><a href="" style="color:#3c3c3c">魔豆妈妈在线申请</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="hello">
+				<a href="" class="img-a"></a>
+				<a href="" class="hi">hi!你好</a>
+				<img style="width:16px;height:16px;position: absolute;top: 45px;left: 75px;" src="./images/top.png" alt="top"><a href="" class="price">领淘金币抵钱<b style="color:#3c3c3c;font-weight:400">&nbsp;或去&nbsp;</b>会员俱乐部</a>
+				<a href="" class="a"><i class="iconmoon i">&#xe604;</i>登录</a>
+				<a href="" class="b">免费注册</a>
+				<a href="" class="c">免费开店</a>
+			</div>
+			<div class="ad">
+				<a href=""><span></span></a>
+				<div class="ad-div">
+					<div class="ad-content" id="ad-content" style="position:absolute;top:0;">
+						<ul>
+							<li><a href=""><b style="color:#ff4400;font-weight:400">[推荐]</b>| 八点档 | 美工文案一相逢从此</a></li>
+							<li><a href=""><b style="color:#ff4400;font-weight:400">[热门]</b>| 音符上的维也纳 碟中碟5音乐</a></li>
+							<li><a href=""><b style="color:#ff4400;font-weight:400">[最新]</b>港澳通行证新政 不能错过的香</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="service">
+				<ul class="service-ul">
+					<li style="width:108px;height:152px;border-right:none;border-bottom:none"><a style="width:110px;height:152px;" href=""><i class="iconmoon iconser" style="width:108px;height:100px;line-height:100px;font-size:60px;">&#xe641;</i>充话费</a></li>
+					<li style="border-right:none;border-bottom:none"><a href=""><i class="iconmoon iconser">&#xe60a;</i>游戏</a></li>
+					<li style="border-right:none;border-bottom:none"><a href=""><i class="iconmoon iconser">&#xe6ce;</i>旅行</a></li>
+					<li style="border-bottom:none;width:55px;border-right:none"><a href=""><i class="iconmoon iconser">&#xe601;</i>保险</a></li>
+				</ul>
+				<ul class="server-ul-t">
+					<li style="border-right:none;border-bottom:none"><a href=""><i class="iconmoon iconser">&#xf003b;</i>彩票</a></li>
+					<li style="border-right:none;border-bottom:none"><a href=""><i class="iconmoon iconser">&#xe631;</i>电影</a></li>
+					<li style="border-bottom:none;width:55px;border-right:none"><a href=""><i class="iconmoon iconser">&#xe625;</i>点外卖</a></li>
+					<li style="border-right:none;"><a href=""><i class="iconmoon iconser">&#xe60e;</i>理财</a></li>
+					<li style="border-right:none;"><a href=""><i class="iconmoon iconser">&#xf0002;</i>找服务</a></li>
+					<li style="border-right:none;"><a href=""><i class="iconmoon iconser">&#xe679;</i>音乐</a></li>
+					<li style="border-right:none;"><a href=""><i class="iconmoon iconser">&#xe645;</i>水电煤</a></li>
+					<li style="width:55px;border-right:none"><a href=""><i class="iconmoon iconser">&#xe640;</i>火车票</a></li>
+				</ul>
+			</div>
+			<!-- 服务小图标各个效果 -->
+			<div class="service-content">
+				<ul class="s-content-ul" id="s-content-ul">
+					<li><a href="">话费充值</a></li>
+					<li><a href="">流量充值</a></li>
+					<li><a href="">固话/宽带充值</a></li>
+					<span style="display:inline-block;width:16px;height:16px;font-size:16px;cursor: pointer;">×</span>
+				</ul>
+				<div class="s-content-all">
+				<div class="s-content-div">
+					<div class="s-div" style="display:block">
+						<div><span>号码</span><input type="text" placeholder="手机号,固话">
+						</div>
+						<div><span>面值</span><input type="text" placeholder="50">
+						</div>
+						<p>售价￥<b class="b">49-49.8</b></p>
+						<a href="">立即充值</a>
+					</div>
+					<div class="s-div" style="display:none">
+						<div><span>号码</span><input type="text" placeholder="手机号">
+						</div>
+						<div><span>流量</span><input type="text" placeholder="50">
+						</div>
+						<p>售价￥<b class="b">49-49.8</b></p>
+						<a href="">立即充值</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="service-content">
+				<ul class="con-ul">
+					<li><a href="">点卡</a></li>
+					<li><a href="">QQ</a></li>
+					<li><a href="">游戏币</a></li>
+					<li><a href="">网页游戏</a></li>
+					<span style="display:inline-block;float:right;width:16px;height:16px;font-size:16px;cursor: pointer;">×</span>
+				</ul>
+				<div class="con-div">
+				<div class="con-game">
+					<span>游戏</span><input type="text" placeholder="永恒之塔">
+				</div>
+				<div class="con-game">
+					<span>面值</span><input type="text" placeholder="元">
+				</div>
+				<span class="rmb">￥</span><input type="radio">自动充值<input type="radio">购买卡密
+				<a href="">立即充值</a><span style="color:#6b6b6b;margin-left:30px">限量免费游戏礼包领取！</span>
+				</div>
+				<div class="con-div" style="display:none">
+				<div class="con-game">
+					<span>游戏</span><input type="text" placeholder="请输入QQ号码">
+				</div>
+				<div class="con-game">
+					<span>面值</span><input type="text" placeholder="元">
+				</div>
+				<span class="rmb" style="width:200px">￥</span>
+				<a href="" style="display:inline-block">立即充值</a><span style="color:#6b6b6b;margin-left:30px">更多精彩在QQ游戏</span>
+				</div>
+				<div class="con-div" style="display:none">
+				<div class="con-game">
+					<span>游戏</span><input type="text" placeholder="永恒之塔">
+				</div>
+				<div class="con-game">
+					<span>面值</span><input type="text" placeholder="元">
+				</div>
+				<a href="" style="display:inline-block;margin-top:15px;">立即充值</a><span style="color:#6b6b6b;margin-left:30px">玩游戏，送彩票！</span>
+				</div>
+				<div class="con-div" style="display:none">
+					<ul class="wangye">
+						<li><a href=""><img style="position:absolute;left:13px;top:0;width:80px;height:45px;" src="./images/wangye.jpg" alt=""></a></li>
+						<li><a href=""><img style="position:absolute;left:103px;top:0;width:80px;height:45px" src="./images/wangye1.jpg" alt=""></a></li>
+						<li><a href=""><img style="position:absolute;left:193px;top:0;width:80px;height:45px" src="./images/wangye2.jpg" alt=""></a></li>
+					</ul>
+					<ul class="wangye-link">
+						<li><a href="">风云无双</a></li>
+						<li><a href="">烈焰</a></li>
+						<li><a href="">德国扑克</a></li>
+						<li><a href="">武艺传说</a></li>
+						<li><a href="">三国无双</a></li>
+						<li><a href="">奇迹来了</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="ali-app">
+				<h3><a href="" class="app">阿里APP</a><a href="" class="more">更多></a></h3>
+				<div class="wrap">
+					<div class="app-bg">
+						<ul>
+							<li class="on"><a href=""><img src="./images/tao.jpeg" alt=""></a>
+							<div class="app-qr">
+								<img src="./images/taoer.jpg" alt="">
+							</div>
+							<span class="spanon" style="block"></span>
+							</li>
+							<li><a href=""><img src="./images/tianmao1111.png" alt=""></a>
+							<div class="app-qr">
+								<img src="./images/tianer.png" alt="">
+							</div>
+							<span></span>
+							</li>
+							<li><a href=""><img src="./images/ju111.png" alt=""></a>
+							<div class="app-qr">
+								<img src="./images/juer.png" alt="">
+							</div>
+							<span></span>
+							</li>
+							<li><a href=""><img src="./images/quar.png" alt=ao.jpg""></a>
+							<div class="app-qr">
+								<img src="./images/quer.png" alt="">
+							</div>
+							<span></span>
+							</li>
+							<li><a href=""><img src="./images/xian.jpg" alt=""></a>
+							<div class="app-qr">
+								<img src="./images/xian1.jpg" alt="">
+							</div>
+							<span></span>
+							</li>
+						</ul>
+					</div>
+					<div class="apps-ft">
+							<div style="display:block"><strong>淘宝:</strong><a href="">淘宝清仓季节，三折大放价</a></div>
+							<div style="display:none"><strong>天猫:</strong><a href="">服饰国际大牌，首降5折 ，全场包邮！</a></div>
+							<div style="display:none"><strong>聚划算:</strong><a href="">手机聚划算购物抽20万抽免单 机会！</a></div>
+							<div style="display:none"><strong>去啊:</strong><a href="">先住后付，信用住酒店真五折 ！</a></div>
+							<div style="display:none"><strong>闲鱼:</strong><a href="">买卖二手闲置就上闲鱼，不用开店卖宝贝!</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="story">
+				<h3><a href="" class="gushi">淘宝故事</a></h3>
+				<div class="feature-bd">
+					<a href="" class="online"><img src="./images/zhiwu.webp" alt="">
+					<div class="feature-w">
+						<span>隐居玩植物坚持"植觉"</span>
+						<em style="display:block"></em>
+						<b style="display:block">1</b>
+					</div>
+					</a>
+					<a href="">
+						<img width="60px" height="60px" src="./images/chaofu.webp" alt="">
+						<div class="feature-w">
+						<span>乔雅短款 秋装新风潮</span>
+						<em style="display:none"></em>
+						<b style="display:none">2</b>
+					</div>
+					</a>
+					<a href="">
+						<img width="60px" height="60px" src="./images/yinshi.webp" alt="">
+						<div class="feature-w">
+						<span>饰品有灵魂 独立银匠铺</span>
+						<em style="display:none"></em>
+						<b style="display:none">3</b>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="ali-goods">
+			<div class="goods-title">
+						<span></span>
+						<a href="">定制我的偏好</a>
+			</div>
+				<div class="discover-goods">
+					
+					<div class="goods-item">
+						<a href=""><img width="100px" height="100px" src="./images/dazhaxie.webp" alt=""></a>
+						<div class="goods-desc">
+							<p>蟹新鲜 现捕正宗</p>
+							<a href="">根据你最近浏<br>览的大闸蟹推荐</a>
+							<p>已售104件</p>
+						</div>
+					</div>
+					<div class="goods-item">
+						<a href=""><img width="100px" height="100px" src="./images/beizi111.webp" alt=""></a>
+						<div class="goods-desc">
+							<p>新疆棉被空调被</p>
+							<a href="">根据你最近浏<br>览的被子推荐</a>
+							<p>已售24件</p>
+						</div>
+					</div>
+					<div class="goods-item">
+						<a href=""><img width="100px" height="100px" src="./images/tuoxie.webp" alt=""></a>
+						<div class="goods-desc">
+							<p>忧绸浴室防滑拖鞋</p>
+							<a href="">根据你最近浏<br>览的拖鞋推荐</a>
+							<p>已售3947件</p>
+						</div>
+					</div>
+					<div class="goods-item">
+						<a href=""><img width="100px" height="100px" src="./images/xiezi111.webp" alt=""></a>
+						<div class="goods-desc">
+							<p>蟹诸葛阳澄湖大闸蟹</p>
+							<a href="">根据你最近浏<br>览的大闸蟹推荐</a>
+							<p>已售104件</p>
+						</div>
+					</div>
+					<div class="goods-item">
+						<a href=""><img width="100px" height="100px" src="./images/cansibei.webp" alt=""></a>
+						<div class="goods-desc">
+							<p>正品100%蚕桑丝</p>
+							<a href="">根据你最近浏<br>览的被子推荐</a>
+							<p>已售419件</p>
+						</div>
+					</div>
+					<div class="goods-item">
+						<a href=""><img width="100px" height="100px" src="./images/dazhaxie11.webp" alt=""></a>
+						<div class="goods-desc">
+							<p>阳澄湖正宗大闸蟹</p>
+							<a href="">根据你最近浏<br>览的大闸蟹推荐</a>
+							<p>已售19072件</p>
+						</div>
+					</div>
+					<div class="ninth-pic">
+						<ul id="ninth-pic">
+							<li class="ninth-pic1"><a href=""><img src="./images/xiaobao111.webp" alt=""></a><div class="pic-cover">
+							<p>kipling美国代购</p>
+							<div class="stars">
+							 	☆2442	
+							</div>
+						</div></li>
+							<li class="ninth-pic2"><a href=""><img src="./images/fozhu.webp" alt=""></a>
+							<div class="pic-cover1">
+							<p>kipling美国代购</p>
+							<div class="stars">
+							☆2442	
+							</div>
+						</div></li>
+							<li class="ninth-pic3"><a href=""><img src="./images/xiangji.webp" alt=""></a>
+							<div class="pic-cover2">
+							<p>kipling美国代购</p>
+							<div class="stars">
+							☆2442	
+							</div>
+						</div></li>
+							<li class="ninth-pic4"><a href=""><img src="./images/nvxie.webp" alt=""></a>
+							<div class="pic-cover3">
+							<p>kipling美国代购</p>
+							<div class="stars">
+							☆2442	
+							</div>
+						</div></li>
+							<li class="ninth-pic5"><a href=""><img src="./images/hao.webp" alt=""></a>
+							<div class="pic-cover4">
+							<p>kipling美国代购</p>
+							<div class="stars">
+							☆2442	
+							</div>
+						</div></li>
+							<li class="ninth-pic6"><a href=""><img src="./images/busi.webp" alt=""></a>
+							<div class="pic-cover5">
+							<p>kipling美国代购</p>
+							<div class="stars">
+							☆2442	
+							</div>
+						</div></li>
+							<li class="ninth-pic7"><a href=""><img src="./images/xiaobao.webp" alt=""></a>
+							<div class="pic-cover6">
+							<p>kipling美国代购</p>
+							<div class="stars">
+							☆2442	
+							</div>
+						</div></li>
+							<li class="ninth-pic8"><a href=""><img src="./images/meigui_.webp" alt=""></a>
+							<div class="pic-cover7">
+							<p>kipling美国代购</p>
+							<div class="stars">
+							☆2442	
+							</div>
+						</div></li>
+							<li class="ninth-pic9"><a href=""><img src="./images/shuiyi.webp" alt=""></a>
+							<div class="pic-cover8">
+							<p>kipling美国代购</p>
+							<div class="stars">
+							☆2442	
+							</div>
+						</div></li>
+						</ul>
+					</div>
+					<div class="pic-book">
+						<a href="">换一组看看</a>
+					</div>
+					<div class="discover-title">
+						<h3></h3><span>你可能喜欢的店铺</span>
+					</div>
+					<div class="discover-shop">
+					<div class="dis-shop1">
+						<h4>悦彩饰堂韩国进口童装</h4>
+						<ul class="dis-ul">
+							<li><a href="">如实描述</a></li>
+							<li><a href="">很舒服</a></li>
+							<li><a href="">很萌</a></li>
+							<li><a href="">韩版</a></li>
+						</ul>
+						<ul class="dis-ul-1">
+							<li><a href=""><img src="./images/xiaotuoxie.webp" alt=""></a></li>
+							<li><a href=""><img src="./images/xiaotuoxie1.webp" alt=""></a></li>
+							<li><a href=""><img src="./images/xiaotuoxie2.webp" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="dis-shop1">
+						<h4>钱皇蚕桑丝被店</h4>
+						<ul class="dis-ul">
+							<li><a href="">邮费便宜</a></li>
+							<li><a href="">态度不错</a></li>
+							<li><a href="">很舒服</a></li>
+							<li><a href="">是正品</a></li>
+						</ul>
+						<ul class="dis-ul-1">
+							<li><a href=""><img src="./images/cansi1.webp" alt=""></a></li>
+							<li><a href=""><img src="./images/cansi2.webp" alt=""></a></li>
+							<li><a href=""><img src="./images/cansi3.webp" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="dis-shop1">
+						<h4>朴西家居生活馆</h4>
+						<ul class="dis-ul">
+							<li><a href="">如实描述</a></li>
+							<li><a href="">很舒服</a></li>
+							<li><a href="">很萌</a></li>
+							<li><a href="">韩版</a></li>
+						</ul>
+						<ul class="dis-ul-1">
+							<li><a href=""><img src="./images/tuoxie1.webp" alt=""></a></li>
+							<li><a href=""><img src="./images/tuoxie2.webp" alt=""></a></li>
+							<li><a href=""><img src="./images/tuoxie3.webp" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="dis-shop1">
+						<h4>COCO BLUEBERRY</h4>
+						<ul class="dis-ul">
+							<li><a href="">态度很好</a></li>
+							<li><a href="">很漂亮</a></li>
+							<li><a href="">很萌</a></li>
+							<li><a href="">正品</a></li>
+						</ul>
+						<ul class="dis-ul-1">
+							<li><a href=""><img src="./images/wanju1.webp" alt=""></a></li>
+							<li><a href=""><img src="./images/wanju2.webp" alt=""></a></li>
+							<li><a href=""><img src="./images/wanju3.webp" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="dis-shop1">
+						<h4>APCSHOP-CASHMERE</h4>
+						<ul class="dis-ul">
+							<li><a href="">很划算</a></li>
+							<li><a href="">售后不错</a></li>
+							<li><a href="">高贵风</a></li>
+							<li><a href="">典雅</a></li>
+						</ul>
+						<ul class="dis-ul-1">
+							<li><a href=""><img src="./images/weijin1.webp" alt=""></a></li>
+							<li><a href=""><img src="./images/weijin2.webp" alt=""></a></li>
+							<li><a href=""><img src="./images/weijin3.webp" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="dis-shop1">
+						<h4>动力基因网羽用品店</h4>
+						<ul class="dis-ul">
+							<li><a href="">如实描述</a></li>
+							<li><a href="">很舒服</a></li>
+							<li><a href="">很萌</a></li>
+							<li><a href="">韩版</a></li>
+						</ul>
+						<ul class="dis-ul-1">
+							<li><a href=""><img src="./images/yudong1.webp" alt=""></a></li>
+							<li><a href=""><img src="./images/yundong2.webp" alt=""></a></li>
+							<li><a href=""><img src="./images/yundong3.webp" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="pic-book">
+						<a href="">换一组看看</a>
+					</div>
+					</div>
+				</div>
+			</div>
+			<img width="284px" height="180px" style="margin-top:10px;" src="./images/pingguo.jpg" alt="">
+		</div>
+		<div class="middle-ad">
+			<div class="hot">
+				<p>当前<br>热点</p>
+				<ul>
+					<li><a href="">女装抢新</a></li>
+					<li><a href="">限时限量</a></li>
+					<li><a href="">女神必备</a></li>
+					<li><a href="">中秋美食</a><img src="./images/N.gif" alt=""></li>
+					<li><a href="">秋靴上新</a></li>
+					<li><a href="">低价批囤</a><img src="./images/N1.gif" alt=""></li>
+				</ul>
+			</div>
+			<div class="hot hot-1">
+				<p>精彩<br>推荐</p>
+				<ul>
+					<li><a href="">天猫进口</a></li>
+					<li><a href="">汽车狂欢</a></li>
+					<li><a href="">旅游特卖</a></li>
+					<li><a href="">闺蜜淘货</a></li>
+					<li><a href="">潮电街</a></li>
+					<li><a href="">星店</a></li>
+					<li><a href="">余额宝</a></li>
+					<li><a href="">大牌捡宝</a></li>
+				</ul>
+			</div>
+			<div class="hot-all">
+			<div class="hot hot-2" id="hot_2" style="position:absolute;top:0">
+				<p>当前<br>热点</p>
+				<ul>
+					<li><a href="">奢品玉翠</a><img src="./images/N.gif" alt=""></li>
+					<li><a href="">艺术品</a></li>
+					<li><a href="">资产甩卖</a><img src="./images/N1.gif" alt=""></li>
+					<li><a href="">二手车</a></li>
+				</ul>
+				<img class="yushi" src="./images/yuzhuo.jpg" alt="yushi">
+				<p>淘宝<br>众筹</p>
+				<ul>
+					<li><a href="">新品首发</a></li>
+					<li><a href="">设计范</a></li>
+					<li><a href="">智能硬件</a></li>
+					<li><a href="">明星款</a></li>
+				</ul>
+				<img src="./images/yinxiang.jpg" style="position:absolute;top:80px;right:10px" alt="yinxiang">
+			</div>
+			<a href="javascript:;" class="top" id="top" style="background:#fff">&gt;</a>
+			<a href="javascript:;" class="bottom" id="bottom" style="background:#fff">&lt;</a>
+			</div>
+		</div>
+		<div class="content-close">
+			<a class="title" href="">服饰鞋包</a><div class="shoe"><em></em><a href="">姑娘们该换一条新裙子啦！</a></div>
+			<ul class="close-ul">          
+				<li><a href="" style="font-weight:700">潮流女装</a><a href="" style="color:#ff4400">韩版</a><a href="">连衣裙</a><a href="">T恤</a><a href="" style="color:#ff4400">套装</a><a href="">秋新品</a><a href=""></a><a href="">针织衫</a><a href="">半裙</a><a href="">品牌清仓</a></li>
+				<li><a href="" style="font-weight:700">美搭</a><a href="">强调女装</a><a href="" style="color:#ff4400">呢外套</a><a href="">风衣</a><a href="">裤子</a><a href="">长袖</a><a href="" style="color:#ff4400">短外套</a><a href="">牛仔裤</a><a href="" style="color:#ff4400">卫衣</a><a href="">妈妈装</a><a href="">大码</a></li>
+				<li><a href="" style="font-weight:700">时尚男装</a><a href="" style="color:#ff4400">秋上新</a><a href="">T恤</a><a href="">休闲裤</a><a href="" style="color:#ff4400">外套</a><a href="" style="color:#ff4400">夹克</a><a href="">裤子</a><a href="">品牌清仓</a><a href="">淘先生</a></li>
+				<li><a href="" style="font-weight:700">流行女鞋</a><a href="">新品</a><a href="" style="color:#ff4400">乐福鞋</a><a href="">厚底</a><a href="">单鞋</a><a href="">短靴</a><a href="" style="color:#ff4400">高帮</a><a href="">明星同款</a><a href="" style="color:#ff4400">清仓</a><a href="">街拍</a></li>
+				<li><a href="" style="font-weight:700">时尚男鞋</a><a href="">豆豆鞋</a><a href="" style="color:#ff4400">秋上新</a><a href="">休闲</a><a href="">高帮</a><a href="">品牌秋促</a><a href="" style="color:#ff4400">运动</a><a href="">皮鞋</a><a href="" style="color:#ff4400">潮男</a><a href="">男靴</a></li>      
+				<li><a href="" style="font-weight:700">流行女包</a><a href="">男包</a><a href="" style="color:#ff4400">双肩包</a><a href="" style="color:#ff4400">钱包</a><a href="">拉杆箱</a><a href="">秋上新</a><a href="">真皮</a><a href="">明星款</a><a href="" style="color:#ff4400">潮包</a><a href="">斜挎</a></li>       
+				<li><a href="" style="font-weight:700">性感内衣</a><a href="">秋新品</a><a href="" style="color:#ff4400">文胸</a><a href="">睡衣</a><a href="">女内裤</a><a href="">男内裤</a><a href="" style="color:#ff4400">睡裙</a><a href="">袜子</a><a href="" style="color:#ff4400">丝袜</a><a href="">秋裤</a></li>       
+				<li><a href="" style="font-weight:700">服饰配件</a><a href="">帽子</a><a href="" style="color:#ff4400">皮带</a><a href="">围巾</a><a href="">新品</a><a href="">桑蚕丝巾</a><a href="" style="color:#ff4400">手套</a><a href="">毛线</a><a href="">头层皮</a><a href="">鞋垫</a></li>
+			</ul>
+			<img class="img-1" src="./images/close1.webp" alt="" width="135px" height="135px" style="position:absolute;left:450px;top:18px;">
+			<img src="./images/close2.webp" alt="" width="135px" height="135px" style="position:absolute;left:450px;top:160px;">
+			<img src="./images/close3_.webp" alt="" width="140px" height="278px" style="position:absolute;left:590px;top:18px;">
+			<img src="./images/close4.webp" alt="" width="135px" height="135px" style="position:absolute;right:15px;top:18px;">
+			<img src="./images/close5.webp" alt="" width="135px" height="135px" style="position:absolute;right:15px;top:160px;">
+			<p style="position:absolute;top:125px;left:450px;">[ifashion]秋款男士牛</p>
+			<p style="position:absolute;top:268px;left:450px;">[抢新]秋款首发包邮</p>
+			<p style="position:absolute;top:268px;left:590px;">[女装]秋季好色这样穿</p>
+			<p style="position:absolute;top:125px;right:15px;">[百丽]全场9.9元起</p>
+			<p style="position:absolute;top:267px;right:15px;">[内衣]新品买2免1</p>
+		</div>
+		<div class="sports">
+			<div class="sports-s">
+				<a href="" class="title">运动户外</a><div class="huwai">
+					<em></em><a href="">运动服冲低价</a>
+				</div>
+				<div class="sports-t">
+				<a href="" class="title-1">
+					<img src="./images/sport1.webp" alt="" width="100px" height="80px">
+					<p>Nike新款潮品99元起！</p>
+					<strong style="color:#3c3c3c;margin-left:8px">虎扑推荐店铺</strong>
+				</a>
+				<a href="" class="title-1 title-2">
+					<img src="./images/sport2_.webp" alt="" width="100px" height="80px">
+					<p>骑行装备大放价300起</p>
+					<strong style="color:#3c3c3c;margin-left:8px">骑行派必备</strong>
+				</a>
+				</div>                 
+				<ul class="sports-ul">
+					<li><a href="" style="font-weight:700">运动潮鞋</a><a href="">跑步鞋</a><a href="">板鞋</a><a href="">限量版</a></li>
+					<li><a href="" style="font-weight:700">运动服包</a><a href="">七分裤</a><a href="">T恤</a><a href="" style="color:#ff4400">防晒服</a></li>
+					<li><a href="" style="font-weight:700">户外野营</a><a href="">皮肤衣</a><a href="" style="color:#ff4400">徒步</a><a href="">冲锋衣</a></li>
+					<li><a href="" style="font-weight:700">骑行装备</a><a href="">山地车</a><a href="">轮滑</a><a href="" style="color:#ff4400">电动车</a></li>
+					<li><a href="" style="font-weight:700">垂钓用品</a><a href="">钓竿</a><a href="">渔具</a><a href="" style="color:#ff4400">钓场</a><a href="">防蚊</a></li>
+					<li><a href="" style="font-weight:700">健身球迷</a><a href="">跑步机</a><a href="" style="color:#ff4400">冰巾</a><a href="">羽毛球</a></li>
+				</ul>
+				<a href="" class="more">更多<span style="display:inline-block; width:4px;height:4px;">></span></a>
+			</div>
+			<div class="sports-s sport-bew">
+				<a href="" class="title">运动户外</a><div class="huwai">
+				<em></em><a href="">秋季扫货第一季</a></div>
+				<div class="sports-t">
+				<a href="" class="title-1">
+					<img src="./images/bew.webp" alt="" width="100px" height="80px">
+					<p>怎能不换套最inの秋季饰品呢</p>
+					<strong style="color:#3c3c3c;margin-left:8px">多彩“饰”界</strong>
+				</a>
+				<a href="" class="title-1 title-2">
+					<img src="./images/bew2.webp" alt="" width="194px" height="80px">
+				</a>
+				</div>                 
+				<ul class="sports-ul">                   
+					<li><a href="" style="font-weight:700">珠宝首饰</a><a href="">项链</a><a href="">彩宝</a><a href="">裸钻</a><a href="">黄金</a></li>
+					<li><a href="" style="font-weight:700">品质手表</a><a href="">瑞士表</a><a href="">机械表</a><a href="" style="color:#ff4400">天梭</a></li>
+					<li><a href="" style="font-weight:700">流行饰品</a><a href="">手串</a><a href="" style="color:#ff4400">发饰</a><a href="">戒指</a><a href="">银饰</a></li>
+					<li><a href="" style="font-weight:700">潮流眼镜</a><a href="">墨镜</a><a href="">近视镜</a><a href="" style="color:#ff4400">老花镜</a></li>
+					<li><a href="" style="font-weight:700">最热单品</a><a href="">银月饼</a><a href="">菩提</a><a href="" style="color:#ff4400">电子烟 </a></li>
+					<li><a href="" style="font-weight:700">烟具酒具</a><a href="">zippo</a><a href="" style="color:#ff4400">电子烟</a><a href="">军刀</a></li>
+				</ul>
+				<a href="" class="more">更多<span style="display:inline-block; width:4px;height:4px;">></span></a>
+			</div>
+		</div>
+		<div class="content-ad2">
+			
+		</div>
+		<div class="content-iphone">
+		   <div class="electronic-main">
+			<a href="" class="tel-title"></a><div class="chaoliu">
+				<em></em><a href="">你的科技潮流领地</a></div>
+			<div class="banners">
+				<div class="banner-1">
+				<img src="./images/buxing.webp" alt="" width="80px" height="70px">
+				<p>拉风代步车999起</p>
+				<a href="">智能出行</a>
+				</div>
+				<div class="banner-1">
+				<img src="./images/shoubiao.webp" alt="" width="80px" height="70px">
+				<p>心率智能手环售价391</p>
+				<a href="">睡眠出行</a>
+				</div>
+				<div class="banner-1">
+				<img src="./images/gongzi.webp" alt="" width="80px" height="70px">
+				<p>公仔蓝牙音响368元</p>
+				<a href="">就爱呆萌</a>
+				</div>
+			</div>
+			<div class="banner-ul">
+				<ul>      
+					<li><a href="">手机</a><a href="">苹果6</a><a href="">三星</a><a href="" style="color:#ff4400">小米</a><a href="">华为</a></li>
+					<li><a href="">影音娱乐</a><a href="">单反</a><a href="" style="color:#ff4400">美颜相机</a><a href="" style="color:#ff4400">体感游戏</a><a href="">蓝牙耳机</a><a href="">蓝牙音箱</a></li>
+					<li><a href="">电脑平板</a><a href="" style="color:#ff4400">ipad</a><a href="">win8</a><a href="">DIY电脑</a></li>
+					<li><a href="">家用电器</a><a href="">吸尘器</a><a href="">加湿器</a><a href="" style="color:#ff4400">电饭煲</a><a href="" style="color:#ff4400">扫地机器人</a><a href="">蒸汽拖把</a></li>
+					<li><a href="">智能生活</a><a href="">儿童手表</a><a href="" style="color:#ff4400">智能秤</a><a href="">摄像头</a></li>
+					<li><a href="">个护保健</a><a href="">按摩椅</a><a href="">剃须刀</a><a href="" style="color:#ff4400">蒸脸器</a><a href="">电吹风</a><a href="" style="color:#ff4400">足浴器</a></li>
+				</ul>
+				</div>
+			</div>
+			<div class="electronic-rmd">
+				<div class="elect-rbanner">
+				<a href=""><img src="./images/dianjing.webp" alt="" width="320px" height="180px;"><span><em>最强电竞大人</em>全都在这里等你</span></a>
+				</div>
+				<div class="rbanner-link">
+					<a href="">[车载]驾驶必备潮品</a>
+					<a href="">[酷炫]超级智能自行车</a>
+					<a href="">[发现]智能家居潮品</a>
+					<a href="">[闪购]儿童手表299秒闪</a>
+				</div>
+			</div>
+		</div>
+		<div class="sports">
+			<div class="sports-s">
+				<a href="" class="eat"></a><div class="huichi"><em></em><a href="">吃货的世界你不懂</a></div>
+				<div class="sports-t">
+				<a href="">
+					<img src="./images/yuebing.webp" alt="" width="70px" height="70px" style="border-radius:50%;margin-left:5px;">
+					<strong class="moon">中秋月饼<em></em></strong>
+				</a>
+				<a href="">
+					<img src="./images/nongzi.webp" alt="" width="70px" height="70px" style="border-radius:50%;position:absolute;left:100px;right:20px;">
+					<strong class="moon moon1">农资促销<em></em></strong>
+				</a>
+				<a href="">
+					<img src="./images/jinkou.webp" alt="" width="70px" height="70px" style="border-radius:50%;position:absolute;left:200px;top:0px;">
+					<strong class="moon moon2">进口零食<em></em></strong>
+				</a>
+				<a href="">
+					<img src="./images/chaye.webp" alt="" width="70px" height="70px" style="border-radius:50%;position:absolute;left:300px;top:0px;">
+					<strong class="moon moon3">茶叶养生<em></em></strong>
+				</a>
+
+				</div>                 
+				<ul class="sports-ul">     
+					<li><a href="" style="font-weight:700">休闲零食</a><a href="">肉松饼</a><a href="">巧克力</a><a href="">月饼</a></li>
+					<li><a href="" style="font-weight:700">果蔬肉鱼</a><a href="">大闸蟹</a><a href="">车厘子</a><a href="" style="color:#ff4400">芒果</a></li>
+					<li><a href="" style="font-weight:700">粮油调味</a><a href="">大米</a><a href="" style="color:#ff4400">月饼diy</a><a href="">橄榄油</a></li>
+					<li><a href="" style="font-weight:700">美酒佳酿</a><a href="">五粮液</a><a href="">红酒礼盒</a></li>
+					<li><a href="" style="font-weight:700">茶叶冲饮</a><a href="">花茶</a><a href="">咖啡</a><a href="" style="color:#ff4400">酸奶</a><a href="">普洱</a></li>
+					<li><a href="" style="font-weight:700">滋补养生</a><a href="">枸杞</a><a href="" style="color:#ff4400">虫草</a><a href="">蜂巢蜜</a></li>
+				</ul>
+				<a href="" class="more">更多<span style="display:inline-block; width:4px;height:4px;">></span></a>
+			</div>
+			<div class="sports-s sport-bew">
+				<a href="" class="title">孕妇童</a><div class="yunfu"><em></em><a href="">孕妇装秋季新款</a></div>
+				<div class="sports-t">
+				<a href="" class="title-1">
+					<img src="./images/qinzi.webp" alt="" width="100px" height="80px">
+					<p style="line-height:22px;">24个 韩国亚克力卡通儿童发夹</p>
+					<strong style="color:#3c3c3c;margin-left:8px">亲子装</strong>
+				</a>
+				<a href="" class="title-1 title-2">
+					<img src="./images/wanju.webp" alt="" width="194px" height="80px">
+				</a>
+				</div>                 
+				<ul class="sports-ul">                   
+					<li><a href="" style="font-weight:700">珠宝首饰</a><a href="">项链</a><a href="">彩宝</a><a href="">裸钻</a><a href="">黄金</a></li>
+					<li><a href="" style="font-weight:700">品质手表</a><a href="">瑞士表</a><a href="">机械表</a><a href="" style="color:#ff4400">天梭</a></li>
+					<li><a href="" style="font-weight:700">流行饰品</a><a href="">手串</a><a href="" style="color:#ff4400">发饰</a><a href="">戒指</a><a href="">银饰</a></li>
+					<li><a href="" style="font-weight:700">潮流眼镜</a><a href="">墨镜</a><a href="">近视镜</a><a href="" style="color:#ff4400">老花镜</a></li>
+					<li><a href="" style="font-weight:700">最热单品</a><a href="">银月饼</a><a href="">菩提</a><a href="" style="color:#ff4400">电子烟 </a></li>
+					<li><a href="" style="font-weight:700">烟具酒具</a><a href="">zippo</a><a href="" style="color:#ff4400">电子烟</a><a href="">军刀</a></li>
+				</ul>
+				<a href="" class="more">更多<span style="display:inline-block; width:4px;height:4px;">></span></a>
+			</div>
+		</div>
+		<div class="content-ad3">
+			
+		</div>
+		<div class="home">
+			<div class="home-left">
+				<div class="title">
+					<a href="" class="pic"></a>
+					<ul>
+						<li><a href="">设计</a>&gt;</li>
+						<li><a href="">装修</a>&gt;</li>
+						<li><a href="">建材</a>&gt;</li>
+						<li><a href="">家居</a>&gt;</li>
+						<li><a href="">生活</a>&nbsp;</li>
+					</ul>
+				</div>
+				<div class="home-l-content">
+					<ul>
+						<li><a href="">装修设计</a><a href="">全包</a><a href="">改造</a><a href="" style="color:#ff4400">家装设计</a></li>
+						<li><a href="">家装建材</a><a href="">灯</a><a href="" style="color:#ff4400">卫浴</a><a href="">地板</a><a href="">墙纸</a></li>
+						<li><a href="">全屋定制</a><a href="" style="color:#ff4400">衣柜</a><a href="">橱柜</a><a href="">门</a><a href="">定制</a></li>
+						<li><a href="">住宅家具</a><a href="">沙发</a><a href="">床类</a><a href="" style="color:#ff4400">桌椅</a><a href="">柜类</a></li>
+						<li><a href="">家纺床品</a><a href="" style="color:#ff4400">四件套</a><a href="">乳胶枕</a><a href="" style="color:#ff4400">特卖</a></li>
+						<li><a href="">家饰布艺</a><a href="">摆件</a><a href="">挂画</a><a href="" style="color:#ff4400">窗帘</a><a href="">地垫</a></li>
+						<li><a href="">生活家居</a><a href="" style="color:#ff4400">收纳</a><a href="">创意</a><a href="">匙扣</a><a href="" style="color:#ff4400">玩偶</a></li>
+						<li><a href="">居家必备</a><a href="">茶具</a><a href="">置物</a><a href="">收纳</a><a href="" style="color:#ff4400">餐具</a></li>
+					</ul>
+					<ul class="ul-2">
+						<li><a href=""><img src="./images/jiaju1.webp" alt=""><p>网上放心挑设计师</p><strong>设计师</strong></a></li>
+						<li><a href=""><img src="./images/jiaju3.webp" alt=""><p>跟着买手搭美饰</p><strong>看图购</strong></a></li>
+						<li><a href=""><img src="./images/jaiju4.webp" alt=""><p>这个鞋柜功能超多</p><strong>日记</strong></a></li>
+						<li><a href=""><img src="./images/jaiju4.webp" alt=""><p>材质控买手挑好货</p><strong>值得买</strong></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="home-right">
+				<div class="home-r-icon">
+					<a href=""><img src="./images/pinzhi.webp" alt=""><span>品质保障</span></a>
+					<a href=""><img src="./images/wuliu.webp" alt=""><span>物流保障</span></a>
+					<a href=""><img src="./images/shouhou.webp" alt=""><span>售后无忧</span></a>
+				</div>
+				<div class="r-banner">
+					<a href=""><img width="326px" height="186px" src="./images/jiaju5.webp" alt=""><span><em>家饰家艺节</em>是时候，美一下了</span></a>
+				</div>
+				<div class="a-link">
+					<a href="">[买手]小清新风家居</a>
+					<a href="">[软装]家也要换季了</a>
+					<a href="">[曝光]装修费这么被坑的</a>
+					<a href="">[福利]她才是人生赢家啊</a>
+				</div>
+			</div>
+		</div>
+		<div class="sports">
+			<div class="sports-s">
+				<a href="" class="title">吃喝玩乐</a><div class="chihuo"><em></em><a href="">吃货世界你不懂</a></div>
+				<div class="sports-t">
+				<a href="" class="title-1">
+					<img src="./images/game1.webp" alt="" width="100px" height="80px">
+					<p>游戏礼包免费领取！</p>
+					<strong style="color:#3c3c3c;margin-left:8px;">更多精彩等你来</strong>
+				</a>
+				<a href="" class="title-1 title-2">
+					<img src="./images/xie.webp" alt="" width="100px" height="80px">
+					<p>中秋蟹礼阳澄湖新鲜味道！</p>
+					<strong style="color:#3c3c3c;margin-left:8px">99元起抢购</strong>
+				</a>
+				</div>                 
+				<ul class="sports-ul">
+					<li><a href="" style="font-weight:700">运动潮鞋</a><a href="">跑步鞋</a><a href="">板鞋</a><a href="">限量版</a></li>
+					<li><a href="" style="font-weight:700">运动服包</a><a href="">七分裤</a><a href="">T恤</a><a href="" style="color:#ff4400">防晒服</a></li>
+					<li><a href="" style="font-weight:700">户外野营</a><a href="">皮肤衣</a><a href="" style="color:#ff4400">徒步</a><a href="">冲锋衣</a></li>
+					<li><a href="" style="font-weight:700">骑行装备</a><a href="">山地车</a><a href="">轮滑</a><a href="" style="color:#ff4400">电动车</a></li>
+					<li><a href="" style="font-weight:700">垂钓用品</a><a href="">钓竿</a><a href="">渔具</a><a href="" style="color:#ff4400">钓场</a><a href="">防蚊</a></li>
+					<li><a href="" style="font-weight:700">健身球迷</a><a href="">跑步机</a><a href="" style="color:#ff4400">冰巾</a><a href="">羽毛球</a></li>
+				</ul>
+				<a href="" class="more">更多<span style="display:inline-block; width:4px;height:4px;">></span></a>
+			</div>
+			<div class="sports-s sport-bew">
+				<a href="" class="title">护肤彩妆</a><div class="chihuo"><em></em><a href="">makeupforever</a></div>
+				<div class="sports-t">
+				<a href="" class="title-1">
+					<img src="./images/meizhuang.webp" alt="" width="100px" height="80px">
+					<p>大牌秋冬上新尝鲜价</p>
+					<strong style="color:#3c3c3c;margin-left:8px">美妆洋货闪购</strong>
+				</a>
+				<a href="" class="title-1">
+					<img src="./images/kouhong.webp" alt="" width="100px" height="80px">
+					<p>海外直邮免费送达</p>
+					<strong style="color:#3c3c3c;margin-left:8px">省下机票多淘点</strong>
+				</a>
+				</div>                 
+				<ul class="sports-ul">                   
+					<li><a href="" style="font-weight:700">点卡充值</a><a href="">WOW</a><a href="">LOL</a><a href="">DNF</a><a href="">剑灵</a></li>
+					<li><a href="" style="font-weight:700">吃四方</a><a href="">月饼</a><a href="">自助</a><a href="" style="color:#ff4400">冰品</a><a href="">火锅</a></li>
+					<li><a href="" style="font-weight:700">网游物品</a><a href="">QQ</a><a href="" style="color:#ff4400">游戏币</a><a href="">手游充值</a></li>
+					<li><a href="" style="font-weight:700">中秋礼</a><a href="">卡券</a><a href="">大闸蟹</a><a href="" style="color:#ff4400">加油卡</a></li>
+					<li><a href="" style="font-weight:700">游戏超惠</a><a href="">代练</a><a href="">账号</a><a href="" style="color:#ff4400">热门点卡</a></li>
+					<li><a href="" style="font-weight:700">爱美丽</a><a href="">配镜</a><a href="" style="color:#ff4400">美甲</a><a href="">体检</a><a href="">写真 </a></li>
+				</ul>
+				<a href="" class="more">更多<span style="display:inline-block; width:4px;height:4px;">></span></a>
+			</div>
+		</div>
+		<div class="content-ad4">
+			
+		</div>
+		<div class="sports">
+			<div class="sports-s">
+				<a href="" class="title">汽车·用品</a><div class="qiche"><em></em><a href="">带你9.9环游世界</a></div>
+				<div class="sports-t">
+				<a href="" class="title-1">
+					<img src="./images/qiche.webp" alt="" width="100px" height="80px">
+					<p>行车安全必备精品抄底价</p>
+					<strong style="color:#3c3c3c;margin-left:8px;">限量抢购！</strong>
+				</a>
+				<a href="" class="title-1 title-2">
+					<img src="./images/car.webp" alt="" width="194px" height="80px">
+				</a>
+				</div>                 
+				<ul class="sports-ul"> 
+					<li><a href="" style="font-weight:700">热门新车</a><a href="">车秒贷</a><a href="">4S保养</a><a href="">二手车</a></li>
+					<li><a href="" style="font-weight:700">电子导航</a><a href="">车机</a><a href="">后视镜</a><a href="" style="color:#ff4400">GPS</a></li>
+					<li><a href="" style="font-weight:700">精品车饰</a><a href="">座垫</a><a href="" style="color:#ff4400">脚垫</a><a href="">安全座椅</a></li>
+					<li><a href="" style="font-weight:700">大牌配件</a><a href="">HID氙气灯</a><a href="">轮胎</a><a href="" style="color:#ff4400">雨刮</a></li>
+					<li><a href="" style="font-weight:700">外饰美容</a><a href="">刹车片</a><a href="">隔热膜</a><a href="" style="color:#ff4400">车蜡</a></li>
+					<li><a href="" style="font-weight:700">汽车改装</a><a href="">尾翼</a><a href="" style="color:#ff4400">轮毂</a><a href="">大灯总成</a></li>
+				</ul>
+				<a href="" class="more">更多<span style="display:inline-block; width:4px;height:4px;">></span></a>
+			</div>
+			<div class="sports-s sport-bew">
+				<a href="" class="title">花鸟文娱</a><div class="qiche"><em style="left:78px"></em><a href="">花鸟鱼虫挑你喜欢</a></div>
+				<div class="sports-t">
+				<a href="" class="title-1">
+					<img src="./images/hua.webp" alt="" width="100px" height="80px">
+					<p>洗澡刷牙美容疫苗上门服务</p>
+					<strong style="color:#3c3c3c;margin-left:8px">上门宠物服务</strong>
+				</a>
+				<a href="" class="title-1">
+					<img src="./images/gou.webp" alt="" width="100px" height="80px">
+					<p>海外直邮免费送达</p>
+					<strong style="color:#3c3c3c;margin-left:8px">省下机票多淘点</strong>
+				</a>
+				</div>                 
+				<ul class="sports-ul">                                      
+					<li><a href="" style="font-weight:700">绿植盆栽</a><a href="">绿植同城</a><a href="">多肉</a><a href="">小盆栽</a></li>
+					<li><a href="" style="font-weight:700">缤纷鲜花</a><a href="">设计师款</a><a href="">永生花</a></li>
+					<li><a href="" style="font-weight:700">水族小宠</a><a href="">鹦鹉</a><a href="" style="color:#ff4400">鱼</a><a href="">鱼缸</a><a href="">乌龟</a></li>
+					<li><a href="" style="font-weight:700">猫狗世界</a><a href="">狗窝</a><a href="">大美人</a><a href="" style="color:#ff4400">好美味</a></li>
+					<li><a href="" style="font-weight:700">动漫模玩</a><a href="">手办</a><a href="">动漫卫衣</a><a href="" style="color:#ff4400">COS</a></li>
+					<li><a href="" style="font-weight:700">乐器音乐</a><a href="">吉他</a><a href="" style="color:#ff4400">尤克里里</a><a href="">钢琴</a></li>
+				</ul>
+				<a href="" class="more">更多<span style="display:inline-block; width:4px;height:4px;">></span></a>
+			</div>
+		</div>
+		<div class="life">
+			<div class="life-title">
+				<ul id="life_ul">
+					<li class="on">生活服务<span class="public private"></span></li>
+					<li>企业采购<span class="public private-1"></span></li>
+					<li>农资采购<span class="public private-2"></span></li>
+					<li>家庭保健</li>
+				</ul>
+			</div>
+			<div class="life-content">
+				<div class="life_mod" style="display:block">
+					<div class="life-left">
+						<a href="" class="first-a"><img src="./images/shenghuo.webp" alt=""><p>不洗衣服的日子最任性</p></a>
+						<a href="" class="first-a"><img src="./images/shenghuo1.webp" alt=""><p>汽车保养竟如此简单？！</p></a>
+						<a href="" class="first-a"><img src="./images/shenghuo2.webp" alt=""><p>这样秀恩爱才炫酷</p></a>
+					<ul class="first">                   
+						<li><a href="">家庭保洁</a><a href="" style="color:#ff4400">洗衣</a><a href="">私厨</a><a href=""></a><a href="">催乳师</a></li>
+						<li><a href="" style="color:#ff4400">上门养车</a><a href="">洗车</a><a href="">空滤</a><a href="" style="color:#ff4400">加油卡</a></li>
+						<li><a href="">婚纱摄影</a><a href="">婚车</a><a href="">布置</a><a href="" style="color:#ff4400">婚宴</a></li>
+						<li><a href="" style="color:#ff4400">万能缴费</a><a href="">物业</a><a href="">宽带</a><a href="" style="color:#ff4400">水电煤</a></li>
+						<li><a href="">便民服务</a><a href="">挂号</a><a href="">跑腿</a><a href="">找律师</a></li>
+						<li><a href="">最家生活</a><a href="">美甲</a><a href="">按摩</a><a href="" style="color:#ff4400">体检</a></li>
+					</ul>
+					</div>
+					<div class="life-right">
+						<img src="./images/hunsha.webp" alt="">
+					</div>
+				</div>
+				<div class="life_mod" style="display:none">
+					<div class="life-left">
+						<a href="" class="first-a"><img src="./images/caigou1.webp" alt=""><p>万众创业 千元采齐</p></a>
+						<a href="" class="first-a"><img src="./images/caigou2.webp" alt=""><p>服装店主 大促必备</p></a>
+						<a href="" class="first-a"><img src="./images/caigou3.webp" alt=""><p>高效办公  一站集采</p></a>
+					<ul class="first">                   
+						<li><a href="">五金工具</a><a href="" style="color:#ff4400">电钻</a><a href="">工具</a><a href=""></a><a href="">角磨机</a></li>
+						<li><a href="" style="color:#ff4400">办公设备</a><a href="">打印机</a><a href="">投影</a><a href="" style="color:#ff4400">点钞</a></li>
+						<li><a href="">文化用品</a><a href="">钢笔</a><a href="">名片</a><a href="" style="color:#ff4400">文具</a></li>
+						<li><a href="" style="color:#ff4400">商业家具</a><a href="">沙发</a><a href="">办公桌</a><a href="" style="color:#ff4400">货架</a></li>
+						<li><a href="">网络设备 </a><a href="">机房布线</a><a href="">网线</a></li>
+						<li><a href="">个人定制</a><a href="">衬衫</a><a href="">洗包装</a><a href="" style="color:#ff4400">包装</a></li>
+					</ul>
+					</div>
+					<div class="life-right">
+						<img src="./images/caigou4.webp" alt="">
+					</div>
+				</div>
+				<div class="life_mod" style="display:none">
+					<div class="life-left">        
+						<a href="" class="first-a"><img src="./images/nongzi1.webp" alt=""><p>杀菌剂</p></a>
+						<a href="" class="first-a"><img src="./images/nongzi2.webp" alt=""><p>蔬菜种子</p></a>
+						<a href="" class="first-a"><img src="./images/nongzi3.webp" alt=""><p>塑料薄膜</p></a>
+					<ul class="first">                   
+						<li><a href="">农用农药</a><a href="" style="color:#ff4400">除草剂</a><a href="">杀虫剂</a><a href=""></a></li>
+						<li><a href="" style="color:#ff4400">农用种子</a><a href="">粮油种</a><a href="">蔬菜种</a></li>
+						<li><a href="">农用工具</a><a href="">叉</a><a href="">镰刀</a><a href="" style="color:#ff4400">锄头</a></li>
+						<li><a href="" style="color:#ff4400">农用肥料</a><a href="">叶面肥</a><a href="" style="color:#ff4400">新型肥</a></li>
+						<li><a href="">畜牧饲料</a><a href="">添加剂</a><a href="">预混料</a></li>
+						<li><a href="">农用机械</a><a href="">运输机</a><a href="" style="color:#ff4400">农配件</a></li>
+					</ul>
+					</div>
+					<div class="life-right">
+						<img src="./images/nongzi4.webp" alt="">
+					</div>
+				</div>
+				<div class="life_mod" style="display:none">
+					<div class="life-left">
+						<a href="" class="first-a"><img src="./images/baojian1.webp" alt=""><p>健康监测</p></a>
+						<a href="" class="first-a"><img src="./images/baojian2.webp" alt=""><p>康复辅助</p></a>
+						<a href="" class="first-a"><img src="./images/baojian3.webp" alt=""><p>家庭常备</p></a>
+					<ul class="first">                   
+						<li><a href="">计生避孕</a><a href="" style="color:#ff4400">避孕套</a><a href="">排卵试纸</a><a href=""></a></li>
+						<li><a href="" style="color:#ff4400">康复器械</a><a href="">拔罐</a><a href="">刮痧</a><a href="" style="color:#ff4400">止鼾器</a></li>
+						<li><a href="">急救护理</a><a href="">病床</a><a href="">护理垫</a><a href="" style="color:#ff4400">造口</a></li>
+						<li><a href="" style="color:#ff4400">基础检查</a><a href="">听诊</a><a href="">测温</a><a href="" style="color:#ff4400">口罩</a></li>
+						<li><a href="">健康监测</a><a href="">电子血压计</a><a href="">血糖仪</a></li>
+						<li><a href="">助行器械</a><a href="">拐杖</a><a href="" style="color:#ff4400">轮椅</a></li>
+					</ul>
+					</div>
+					<div class="life-right">
+						<img src="./images/baojian4.webp" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content-ad5">
+			
+		</div>
+	</div>
+	<div class="group-by">
+		<div class="group-first">
+			<div class="group-content">
+			<div class="group-title">
+				<p>众筹</p><i class="iconmoon zhong-icon">&#xf0039;<a href="" id="zhongchou"><img src="./images/zhongchou.webp" alt=""><em>更多梦想 更多惊喜</em></a></i>
+			</div>
+			<div class="group-tel">
+				<a href="">
+					<img src="./images/tel.webp" alt="">
+					<span>
+					<p>苹果手表手机支架</p>
+					<em style="font-style:normal;color:#9c9c9c;margin-left:38px;">专门为苹果定制</em>
+					</span>
+				</a>
+			</div>
+			<div class="group-watch">
+				<div class="watch-1">
+				<div class="watch-1-1">
+				<a href=""><img style="margin-right:5px;"src="./images/shoubiao1.webp" alt=""><p>智能运动手表</p></a>
+				</div>
+				<div class="watch-1-2">
+				<a href=""><img src="./images/beizi.webp" alt=""><p>柠檬茶保温杯</p></a>
+				</div>
+				</div>
+				<ul class="watch-link">
+				<li><a href="">智能潮品</a></li>
+				<li><a href="">创意设计</a></li>
+				<li><a href="">动漫周边</a></li>
+				<li><a href="">[&nbsp;<span style="color:#ff4400;">明星同款</span>&nbsp;]</a></li>
+				<li><a href="">新品抢鲜</a></li>
+			</ul>
+			</div>
+			</div>
+		</div>
+		<div class="group-first">
+			<div class="group-content">
+			<div class="group-title">
+				<p>全球购</p><i class="iconmoon quan-icon">&#xf0039;<a href="" id="quanqiugou"><img src="./images/quanqiugou1.webp" alt=""><em>扫码显示全球折扣</em></a></i>
+			</div>
+			<div class="group-tel">
+				<a href="">
+					<img src="./images/quanqiugou.webp" alt="">
+					<span>
+					<p>超人气初秋套装 美！</p>
+					<em style="font-style:normal;color:#9c9c9c;margin-left:38px;">海外潮流新款3折起</em>
+					</span>
+				</a>
+			</div>
+			<div class="group-watch">
+				<div class="watch-1">
+				<div class="watch-1-1">
+				<a href=""><img style="margin-right:5px;"src="./images/bao1.webp" alt=""><p>时髦红唇包</p></a>
+				</div>
+				<div class="watch-1-2">
+				<a href=""><img src="./images/bao2.webp" alt=""><p>扮嫩必搭</p></a>
+				</div>
+				</div>
+				<ul class="watch-link">
+				<li><a href="">全球特卖</a></li>
+				<li><a href="">美式生活</a></li>
+				<li><a href="">萌娃玩具</a></li>
+				<li><a href="">[&nbsp;<span style="color:#ff4400;">奥莱扫货直播</span>&nbsp;]</a></li>
+				<li><a href="" style="border:none">官网代拍直送</a></li>
+			</ul>
+			</div>
+			</div>
+		</div>
+		<div class="group-first">
+			<div class="group-content">
+			<div class="group-title">
+				<p>拍卖会</p><i class="iconmoon pai-icon">&#xf0039;<a href="" id="paimaihui"><img src="./images/paimaihui.webp" alt=""><em>想淘宝 上拍卖</em></a></i>
+			</div>
+			<div class="group-tel">
+				<a href="">
+					<img src="./images/car1.webp" alt="">
+					<span>
+					<p>买车卖车，奔驰8.6万起</p>
+					<em style="font-style:normal;color:#9c9c9c;margin-left:38px;">同样钱买更好的车！</em>
+					</span>
+				</a>
+			</div>
+			<div class="group-watch">
+				<div class="watch-1">
+				<div class="watch-1-1">
+				<a href=""><img style="margin-right:5px;"src="./images/fang1.webp" alt=""><p>超值好房</p></a>
+				</div>
+				<div class="watch-1-2">
+				<a href=""><img width="80px" src="./images/fang2.webp" alt=""><p>5折房变卖</p></a>
+				</div>
+				</div>
+				<ul class="watch-link">
+				<li><a href="">翡翠捡漏</a></li>
+				<li><a href="">佛珠手串</a></li>
+				<li><a href="">保山南红</a></li>
+				<li><a href="">[&nbsp;<span style="color:#ff4400;">绝美碧玺</span>&nbsp;]</a></li>
+				<li><a href="">最美碧玺我最闪耀</a></li>
+			</ul>
+			</div>
+			</div>
+		</div>
+		<div class="group-first">
+			<div class="group-content">
+			<div class="group-title">
+				<p>天天特价</p><i class="iconmoon te-icon">&#xf0039;<a href="" id="tiantiantejia"><img src="./images/tiantiantejia.webp" alt=""><em>10元包邮天天抢~</em></a></i>
+			</div>
+			<div class="group-tel">
+				<a href="">
+					<img src="./images/tejia.webp" alt="">
+					<span>
+					<p>特价秋上新</p>
+					<em style="font-style:normal;color:#9c9c9c;margin-left:38px;">全场9.9元起包邮</em>
+					</span>
+				</a>
+			</div>
+			<div class="group-watch">
+				<div class="watch-1">
+				<div class="watch-1-1">
+				<a href=""><img style="margin-right:5px;"src="./images/tong1.webp" alt=""><p>童装秋上新</p></a>
+				</div>
+				<div class="watch-1-2">
+				<a href=""><img src="./images/tong2.webp" alt=""><p>格调条纹风</p></a>
+				</div>
+				</div>
+				<ul class="watch-link">
+				<li><a href="">时装包包</a></li>
+				<li><a href="">每日美食</a></li>
+				<li><a href="">萌娃来袭</a></li>
+				<li><a href="">[&nbsp;<span style="color:#ff4400;">长款开衫</span>&nbsp;]</a></li>
+				<li><a href="">初秋美型拼内在</a></li>
+			</ul>
+			</div>
+			</div>
+		</div>
+		<div class="group-first">
+			<div class="group-content">
+			<div class="group-title">
+				<p>淘女郎</p><i class="iconmoon tao-icon">&#xf0039;<a href="" id="taonvlang"><img src="./images/taonvlang.webp" alt=""><em>扫一扫 遇见美女</em></a></i>
+			</div>
+			<div class="group-tel">
+				<a href="">
+					<img src="./images/maoyi.webp" alt="">
+					<span>
+					<p>划算！套头毛衣今秋最流行</p>
+					<em style="font-style:normal;color:#9c9c9c;margin-left:38px;">你离时尚只差一件毛衣</em>
+					</span>
+				</a>
+			</div>
+			<div class="group-watch">
+				<div class="watch-1">
+				<div class="watch-1-1">
+				<a href=""><img style="margin-right:5px;"src="./images/waitao1.webp" alt=""><p>
+				时髦小外套</p></a>
+				</div>
+				<div class="watch-1-2">
+				<a href=""><img src="./images/waitao2.webp" alt=""><p>减龄背心裙</p></a>
+				</div>
+				</div>
+				<ul class="watch-link">
+				<li><a href="">短款外套</a></li>
+				<li><a href="">显高秋搭</a></li>
+				<li><a href="">绝美套装</a></li>
+				<li><a href="">[&nbsp;<span style="color:#ff4400;">小脚裤</span>&nbsp;]</a></li>
+				<li><a href="">OL这么穿最显气质</a></li>
+			</ul>
+			</div>
+			</div>
+		</div>
+		<div class="group-first" style="border:none">
+			<div class="group-content">
+			<div class="group-title">
+				<p>阿里旅行</p><i class="iconmoon ali-icon">&#xf0039;<a href="" id="alilvxing"><img width="100px" height="100px" src="./images/ali.webp" alt=""><em>扫码下载客户端</em></a></i>
+			</div>
+			<div class="group-tel">
+				<a href="">
+					<img src="./images/jipiao.webp" alt="">
+					<span>
+					<p>去哪国际机票特惠</p>
+					<em style="font-style:normal;color:#9c9c9c;margin-left:38px;">60元飞香港</em>
+					</span>
+				</a>
+			</div>
+			<div class="group-watch">
+				<div class="watch-1">
+					<div class="watch-1-1">
+						<span></span>
+						<a href="" class="xin">逛新加坡</a>
+						<b>品肉骨茶</b>
+					</div>
+					<div class="watch-1-2">
+					<a href="" style="margin-top:8px;margin-right:8px"><img src="./images/lvxing.webp" alt=""></a>
+					</div>
+				</div>
+				<ul class="watch-link">
+				<li><a href="">智能潮品</a></li>
+				<li><a href="">创意设计</a></li>
+				<li><a href="">动漫周边</a></li>
+				<li><a href="">[&nbsp;<span style="color:#ff4400;">明星同款</span>&nbsp;]</a></li>
+				<li><a href="">新品抢鲜</a></li>
+			</ul>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="guang">
+		<div class="guang-title">
+			<span></span>
+			<i class="iconmoon guang-icon">&#xf0039;</i>
+			<a href="">更多&gt;</a>
+		</div>
+		<ul class="guang-images">
+		<li><a href=""><img src="./images/guangjie1.webp" alt=""><p>韩味十足宽松毛衣</p></a></li>
+		<li><a href=""><img src="./images/guangjie2.webp" alt=""><p>短外套心机搭</p></a></li>
+		<li><a href=""><img src="./images/guangjie3.webp" alt=""><p>迷你zakka多肉摆件</p></a></li>
+		<li><a href=""><img src="./images/guangjie4.webp" alt=""><p>切黄瓜片超好用！</p></a></li>
+		<li><a href=""><img src="./images/guangjie5.webp" alt=""><p>这样扎发显气质</p></a></li>
+		</ul>
+		<div class="guang-roll" id="guang-roll">
+			<div class="roll-images" id="roll-images">
+				<a style="display:block" href=""><img src="./images/rishi1.webp" alt=""><p>日式居家小单品</p></a>
+				<a style="display:none" href=""><img src="./images/rishi2.webp" alt=""><p>听说条纹最显瘦</p></a>
+				<a style="display:none" href=""><img src="./images/rishi3.webp" alt=""><p>这样画睫毛不会晕啦</p></a>
+			</div>
+			<span id="roll_prev">&lt;</span>
+			<span id="roll_next">&gt;</span>
+		</div>
+		<div class="guang-right">
+			<a href=""><img src="./images/xiezi.webp" alt=""></a>
+			<a href=""><img src="./images/xiezi1.webp" alt=""></a>
+			<ul>
+				<li><a href="">[女鞋] <span style="color:#ff4400">仙女范儿单鞋</span></a></li>
+				<li><a href="">[搭配] 实惠小脚裤+秋单鞋</a></li>
+				<li><a href="">[家居] 以后阳台这样装</a></li>
+				<li><a href="">[美妆] 画出萌萌的大眼妆</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="study">
+		<div class="study-item">
+			<div class="item-first">
+				<div class="item-title">
+					<h3>挑食</h3>
+				</div>
+				<a href="">
+					<img src="./images/tiaoshi.webp" alt="">
+					<span>吃，就该这么挑！</span>
+				</a>
+				<div class="thumbs">
+					<a href=""><img style="width:80px;height:70px" src="./images/mugua.webp" alt=""><span>海南红心木瓜</span></a>
+					<a href=""><img img style="width:80px;height:70px" src="./images/mugua1.webp" alt=""><span>金枪鱼肉</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="study-item">
+			<div class="item-first">
+				<div class="item-title">
+					<h3>生活汇</h3><i class="iconmoon">&#xf0039;</i>
+				</div>
+				<a href="">
+					<img src="./images/lengyin.webp" style="width:170px;height:70px" alt="">
+					<span>甜品冷饮29元起！</span>
+				</a>
+				<div class="thumbs">
+					<a href=""><img style="width:80px;height:70px" src="./images/lengyin1.webp" alt=""><span>中秋月饼礼盒</span></a>
+					<a href=""><img img style="width:80px;height:70px" src="./images/lengyin2.webp" alt=""><span>流量充值19起</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="study-item">
+			<div class="item-first">
+				<div class="item-title">
+					<h3>房产</h3><i class="iconmoon">&#xf0039;</i>
+				</div>
+				<a href="">
+					<img style="width:170px;height:70px" src="./images/fang.webp" alt="">
+					<span>租房买房特优惠</span>
+				</a>
+				<div class="thumbs">
+					<a href=""><img style="width:80px;height:70px" src="./images/fang11.webp" alt=""><span>免费玩拿红包</span></a>
+					<a href=""><img img style="width:80px;height:70px" src="./images/fang22.webp" alt=""><span>9.9元租好房</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="study-item">
+			<div class="item-first">
+				<div class="item-title">
+					<h3>学习</h3><i class="iconmoon">&#xf0039;</i>
+				</div>
+				<div class="thumbs" style="margin-bottom:15px;">
+					<a href=""><img style="width:80px;height:70px" src="./images/xuexi.webp" alt=""><span>我要你来上</span></a>
+					<a href=""><img img style="width:80px;height:70px" src="./images/xuexi1.webp" alt=""><span>烧脑高薪技能</span></a>
+				</div>
+				<div class="thumbs">
+					<a href=""><img style="width:80px;height:70px" src="./images/xuexi2.webp" alt=""><span>给生活加点辣</span></a>
+					<a href=""><img img style="width:80px;height:70px" src="./images/xuexi3.webp" alt=""><span>世界方言大全</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="study-item">
+			<div class="item-first">
+				<div class="item-title">
+					<h3>咸鱼</h3><i class="iconmoon">&#xf0039;</i>
+				</div>
+				<a href="">
+					<img style="width:170px;height:70px" src="./images/xianyu.webp" alt="">
+					<span>咸鱼酱酱酱</span>
+				</a>
+				<div class="thumbs">
+					<a href=""><img style="width:80px;height:70px" src="./images/xianyu1.webp" alt=""><span>针织最暖心</span></a>
+					<a href=""><img img style="width:80px;height:70px" src="./images/xianyu2.webp" alt=""><span>我爱蓝胖子</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="study-item">
+			<div class="item-first">
+				<div class="item-title">
+					<h3>星店</h3>
+				</div>
+				<a href="">
+					<img style="width:170px;height:70px" src="./images/xiatian.webp" alt="">
+					<span>夏天老爸入驻</span>
+				</a>
+				<div class="thumbs">
+					<a href=""><img style="width:80px;height:70px" src="./images/xiatian1.webp" alt=""><span>赤赤入驻</span></a>
+					<a href=""><img img style="width:80px;height:70px" src="./images/xuexi22.webp" alt=""><span>“屁王郑”入驻</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hotbuy">
+		<div class="sale-title">
+			<h3>热卖单品</h3>
+			<ul>
+				<li><a href="">耳麦</a></li>
+				<li><a href="">PS4</a></li>
+				<li><a href="">wli</a></li>
+				<li><a href="">CD</a></li>
+				<li><a href="">耳机</a></li>
+				<li><a href="">车载CD</a></li>
+				<li><a href="">女鞋</a></li>
+				<li><a href="">平跟鞋</a></li>
+				<li><a href="">小霸王</a></li>
+				<li><a href="">男内裤</a></li>
+				<li><a href="">ie800</a></li>
+				<li><a href="">彭丽媛</a></li>
+				<li><a href="">羊绒线</a></li>
+				<li><a href="">半身裙</a></li>
+				<li><a href="">坡跟鞋</a></li>
+			</ul>
+		</div>
+		<div class="sale-content">
+			<div class="sale-left">
+				<div class="sale-1">
+					<div class="sale-2">
+						<a href="" class="image"><img src="./images/remai.webp" alt=""></a>
+						<p>￥169.00</p>
+						<span>月销382笔</span>
+						<a href="" class="draw">aimutu 来至韩国时尚户外,敢想敢行,时尚、拼接、撞色的为设计特点。告别以往的冲锋衣设计理念,快 ...</a>
+						<b>评价 2947 收藏6051</b>
+					</div>
+					<div class="mark">
+						<a href="" class="cu">好裤子不等人</a>
+						<a href="" class="look">去看看</a>
+					</div>
+				</div>
+				<div class="sale-3">
+					<a href=""><img src="./images/remai1.webp" alt=""></a>
+					<p>￥499.00</p>
+					<a href="" class="you">包邮</a>
+					<span style="color:#9c9c9c">月销1130笔</span>
+					<div class="mark-sale">
+						<a href="" class="mark-3">好裤子不等人</a>
+						<a href="" class="look-3">去看看</a>
+					</div>
+				</div>
+				<div class="sale-3">
+					<a href=""><img src="./images/remai2.webp" alt=""></a>
+					<p>￥169.00</p>
+					<a href="" class="you">包邮</a>
+					<span style="color:#9c9c9c">月销3808笔</span>
+					<div class="mark-sale">
+						<a href="" class="mark-3">好裤子不等人</a>
+						<a href="" class="look-3">去看看</a>
+					</div>
+				</div>
+				<div class="jianguo">
+				<a href=""><img src="./images/jianguo.jpg" alt=""></a>
+				</div>
+			</div>
+			<div class="sale-left">
+				<div class="sale-1">
+					<div class="sale-2">
+						<a href="" class="image"><img src="./images/xiezi11.webp" alt=""></a>
+						<p>￥29.00</p>
+						<span>月销382笔</span>
+						<a href="" class="draw">希望在布师傅这里能找到您想要的，希望在布师傅这里能体会到您想要的，希望在布师傅这里我们能一...</a>
+						<b>评价 16641 收藏5628</b>
+					</div>
+					<div class="mark">
+						<a href="" class="cu">布师傅!最懂你的人</a>
+						<a href="" class="look">去看看</a>
+					</div>
+				</div>
+				<div class="sale-3">
+					<a href=""><img src="./images/kuzi.webp" alt=""></a>
+					<p>￥98.00</p>
+					<a href="" class="you">包邮</a>
+					<span style="color:#9c9c9c">月销288笔</span>
+					<div class="mark-sale">
+						<a href="" class="mark-3">好裤子不等人</a>
+						<a href="" class="look-3">去看看</a>
+					</div>
+				</div>
+				<div class="sale-3">
+					<a href=""><img src="./images/xiezi22.webp" alt=""></a>
+					<p>￥138.00</p>
+					<a href="" class="you">包邮</a>
+					<span style="color:#9c9c9c">月销4332笔</span>
+					<div class="mark-sale">
+						<a href="" class="mark-3">好裤子不等人</a>
+						<a href="" class="look-3">去看看</a>
+					</div>
+				</div>
+				<div class="jianguo">
+				<a href=""><img src="./images/haisen.jpg" alt=""></a>
+				</div>
+			</div>
+			<div class="sale-left">
+				<div class="sale-1">
+					<div class="sale-2">
+						<a href="" class="image"><img src="./images/baonuan.webp" alt=""></a>
+						<p>￥450.00</p>
+						<span>月销42笔</span>
+						<a href="" class="draw">很有品质感的一款套衫, 复古小圆领麻花毛衣, 简洁流畅的线条,厚实的质感, 演绎三分甜美七分轻 ...</a>
+						<b>评价 2947 收藏6051</b>
+					</div>
+					<div class="mark">
+						<a href="" class="cu">迎秋大促!纯羊绒毛衣</a>
+						<a href="" class="look">去看看</a>
+					</div>
+				</div>
+				<div class="sale-3">
+					<a href=""><img src="./images/dama.webp" alt=""></a>
+					<p>￥99.00</p>
+					<a href="" class="you">包邮</a>
+					<span style="color:#9c9c9c">月销428笔</span>
+					<div class="mark-sale">
+						<a href="" class="mark-3">好裤子不等人</a>
+						<a href="" class="look-3">去看看</a>
+					</div>
+				</div>
+				<div class="sale-3">
+					<a href=""><img src="./images/guo.webp" alt=""></a>
+					<p>￥1380.00</p>
+					<a href="" class="you">包邮</a>
+					<span style="color:#9c9c9c">月销102笔</span>
+					<div class="mark-sale">
+						<a href="" class="mark-3">好裤子不等人</a>
+						<a href="" class="look-3">去看看</a>
+					</div>
+				</div>
+				<div class="jianguo" style="border-left:1px solid #e8e8e8">
+				<a href=""><img src="./images/yinyue.jpg" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="person">
+		<div class="person-1">
+			<i class="iconmoon person-icon">&#xf0030;</i>
+			<span>消费者保障</span>
+			<ul>
+				<li><a href="">保障范围</a></li>
+				<li><a href="">退货退款流程</a></li>
+				<li><a href="">服务中心</a></li>
+				<li><a href="">更多特色服务</a></li>
+			</ul>
+		</div>
+		<div class="person-1">
+			<i class="iconmoon person-icon">&#xf0031;</i>
+			<span>新手上路</span>
+			<ul>
+				<li><a href="">新手专区</a></li>
+				<li><a href="">消费警示</a></li>
+				<li><a href="">交易安全</a></li>
+				<li><a href="">24小时在线帮助</a></li>
+				<li><a href="">免费开店</a></li>
+			</ul>
+		</div>
+		<div class="person-1">
+			<i class="iconmoon person-icon">&#xe60e;</i>
+			<span>付款方式</span>
+			<ul>
+				<li><a href="">快捷支付</a></li>
+				<li><a href="">信用卡</a></li>
+				<li><a href="">余额宝</a></li>
+				<li><a href="">蚂蚁花呗</a></li>
+				<li><a href="">货到付款</a></li>
+			</ul>
+		</div>
+		<div class="person-1">
+			<i class="iconmoon person-icon">&#xf0033;</i>
+			<span>淘宝特色</span>
+			<ul>
+				<li><a href="">手机淘宝</a></li>
+				<li><a href="">旺信</a></li>
+				<li><a href="">大众评审</a></li>
+				<li><a href="">B格指南</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<ul>
+			<li><a href="">阿里巴巴集团</a></li>
+			<li><a href="">淘宝网</a></li>
+			<li><a href="">天猫</a></li>
+			<li><a href="">聚划算</a></li>
+			<li><a href="">全球速卖通</a></li>
+			<li><a href="">阿里巴巴国际交易市场</a></li>
+			<li><a href="">1688</a></li>
+			<li><a href="">阿里妈妈</a></li>
+			<li><a href="">阿里旅行 · 去啊</a></li>
+			<li><a href="">阿里云计算</a></li>
+			<li><a href="">YunOS</a></li>
+			<li><a href="">阿里通信</a></li>
+			<li><a href="">一淘</a></li>
+			<li><a href="">万网</a></li>
+			<li><a href="">高德</a></li>
+			<li><a href="">优视</a></li>
+			<li><a style="border:none" href="">友盟</a></li>
+			<li><a href="">虾米</a></li>
+			<li><a href="">天天动听</a></li>
+			<li><a href="">来往</a></li>
+			<li><a href="">钉钉</a></li>
+			<li><a href="" style="border:none">支付宝</a></li>
+		</ul>
+	</div>
+	<div class="footer-link">
+		<p class="p"><a href="">关于淘宝</a>
+		<a href="">合作伙伴</a>
+		<a href="">营销中心</a>
+		<a href="">廉正举报</a>
+		<a href="">联系客服</a>
+		<a href="">开放平台</a>
+		<a href="">诚征英才</a>
+		<a href="">联系我们</a>
+		<a href="">网站地图</a>
+		<a href="">法律声明</a>
+		<em>© 2003-2015 Taobao.com 版权所有</em>
+		</p>
+		<p><span>网络文化经营许可证：<a href="">浙网文[2013]0268-027号</a></span><b>|</b>
+		<span>增值电信业务经营许可证：<a href="">浙B2-20080224-1</a></span><b>|</b>
+		<span>信息网络传播视听节目许可证：1109364号</span><b>|</b><br>
+		<span>互联网违法和不良信息举报电话：0571-81683755 blxx@list.alibaba-inc.com</span></p>
+	</div>
+	<div class="footer-last">
+		<a href="" class="jin"><img src="./images/jincha.gif" alt=""></a>
+		<a href="" class="guohui"></a>
+		<a href="" class="cnn"></a>
+		<a href="" class="tianqi"></a>
+		<a href="" class="gongxinbu"></a>
+		<a href="" class="beian"></a>
+		<a href="" class="weifa"></a>
+		<a href="" class="wangluo"></a>
+	</div>
+</body>
+</html>
