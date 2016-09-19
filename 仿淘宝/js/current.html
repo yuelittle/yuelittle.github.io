@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.demo {
+			width: 300px;
+			height: 200px;
+			font-size: 24px;
+			background: red;
+		}
+	</style>
+<script type="text/javascript">
+	window.onload = function () {
+		var demo = document.getElementById('demo');
+		if(document.all) {
+			var width = demo.currentStyle.width;
+		}else {
+			var width = getComputedStyle(demo,null).width;
+		}
+		alert(width);
+	}
+</script>
+</head>
+<body>
+	<div class="demo" id="demo">
+		xxx
+	</div>
+</body>
+</html>

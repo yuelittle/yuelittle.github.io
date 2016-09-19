@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>js</title>
+	<script type="text/javascript">
+	window.onload = function () {
+		var divs = document.getElementsByTagName('div');
+		for (var i=0;i<divs.length;i++) {
+			divs[i].id = i;
+			divs[i].onclick = function () {
+				var x = Math.floor(Math.random()*256);
+				var y = Math.floor(Math.random()*256);
+				var z = Math.floor(Math.random()*256);
+				this.style.backgroundColor = 'rgb('+x+','+y+','+z+')';
+				alert(this.id);
+
+
+			}
+		}
+	}
+	</script>
+	<style type="text/css">
+		.demo {
+			width: 200px;
+			height: 200px;
+			background: red;
+			float: left;
+			margin-left: 5px;
+			margin-top: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+	<div class="demo"></div>
+</body>
+</html>

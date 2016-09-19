@@ -1,0 +1,19 @@
+@charset "urf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.box {
+  width: 100%;
+
+  min-width: 640px;
+ height: 1000px;
+}
+.box .nav{width:640px;height:50px;margin:0 auto;}
+.box .nav .left{color:#e74d59;font-size:16px;line-height: 50px;font-weight:bold;float:left;}
+.box .nav span{width:560px;height:30px;background:#ebebeb;float:left;margin-top:7px;margin-right:8px;}
+.box .nav img{width:22px;height:30px;float:left;}
+
